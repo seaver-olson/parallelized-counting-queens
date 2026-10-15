@@ -1,0 +1,99 @@
+/*
+ * OpenMP static N-Queens solver: distribute first-row branches across threads.
+ *
+ * Parallel program that counts the solutions to the N-Queens problem:
+ * the number of ways to place N queens on an N x N chessboard so that no
+ * two queens share a row, column, or diagonal.
+ *
+ * Build:  make openmp-static
+ * Run:    OMP_NUM_THREADS=4 ./openmp_static_nqueens N
+ *
+ * Every solution has exactly one queen in each row, so we fill the board
+ * one row at a time, top to bottom. Bitmasks track occupied columns and
+ * diagonal attacks so we visit only legal squares. Passing masks by value
+ * preserves the previous row's state for recursive backtracking. Mirror
+ * symmetry lets us search half the first row and double its count; an odd
+ * board's center column is counted once. OpenMP distributes these branches
+ * across threads and sums their counts with a reduction.
+ *
+ * Reading N, checking the answer, and printing are in utils.c; timing uses
+ * omp_get_wtime(). Feel free to use any of the material
+ * from utils.c in your own code, but I recommend against changing it.
+ * You are also welcome to add to utils.c and to use anything from this file
+ * in your own code. You may also add new files to the project.
+ *
+ * I especially recommend using the print function from utils.c to keep your
+ * outputs consistent, but it is not requried as long as you tell me how to use
+ * and interpret your output.
+ *
+ * Don't forget to modify the preamble of any files you touch and to build a 
+ * README.
+ *
+ * A Makefile is provided for this assignment. You are encouraged to modify the
+ * given Makefile to add new targets for your own code.
+ *
+ * This code was written for COMP 364/464 at Loyola University Chicago
+ *
+ * AI Acknowledgement:
+ * This code was built with the help of AI tools, including Anthropic's Claude
+ * Opus 5.5 and Qwen-25B-Flash. AI tools were used to assist in proofreading, splitting
+ * functions, and structuring comments. Testing was performed manually.
+ * OpenAI Codex assisted with bitmask backtracking, mirror symmetry, and OpenMP.
+ */
+
+#include <omp.h>
+
+#include "utils.h"
+
+/* Low N bits mark the board's columns. Set once in main(). */
+static unsigned all;
+
+/*
+ * Count completions using occupied columns and diagonal attacks in this row.
+ */
+unsigned long long solve(unsigned columns, unsigned left, unsigned right)
+{
+    /* One queen per row and column: all columns filled means N queens. */
+    if (columns == all) {
+        return 1;
+    }
+
+    unsigned long long count = 0;
+    unsigned available = all & ~(columns | left | right);
+
+    while (available) {
+        /* Select the lowest legal bit, then remove it from this row's choices. */
+        unsigned queen = available & (0u - available);
+        available &= available - 1u;
+
+        /* Diagonal attacks move one column sideways in the next row. */
+        count += solve(columns | queen,
+                       ((left | queen) << 1) & all,
+                       (right | queen) >> 1);
+    }
+
+    return count;
+}
+
+int main(int argc, char *argv[])
+{
+    int n = parse_board_size(argc, argv);
+    all = (1u << n) - 1u;
+
+    double start = omp_get_wtime();
+    unsigned long long count = 0;
+
+    /* Threads share branches; double mirrored branches, but not the center. */
+    #pragma omp parallel for reduction(+:count) schedule(static)
+    for (int col = 0; col < (n + 1) / 2; col++) {
+        unsigned queen = 1u << col;
+        count += solve(queen, queen << 1, queen >> 1)
+                 * (col < n / 2 ? 2 : 1);
+    }
+
+    double end = omp_get_wtime();
+
+    print_results("omp-static", n, count, end - start);
+
+    return 0;
+}

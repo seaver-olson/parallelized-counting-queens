@@ -3,6 +3,7 @@
  *
  * Helper functions for the N-Queens project: reading N from the command
  * line, timing, checking answers, and printing results.
+ * Accepted board sizes extend through N = 27, with known solution counts.
  *
  * You should not need to change this file or utils.c. Include this header
  * in each of your parallel versions and link against utils.o (see the
@@ -18,7 +19,7 @@
 
 /* Smallest and largest board sizes the program accepts. */
 #define MIN_N 4
-#define MAX_N 16
+#define MAX_N 27
 
 /*
  * Read the board size N from argv[1].

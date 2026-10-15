@@ -2,6 +2,7 @@
  * utils.c
  *
  * Implementations of the helper functions declared in utils.h.
+ * Known solution counts extend through N = 27 (OEIS A000170).
  *
  * You should not need to modify this file. You are welcome to add to it, however.
  * 
@@ -76,6 +77,7 @@ long long expected_solutions(int n)
     /*
      * Known solution counts, indexed by N
      * Index 0 is unused.
+     * Source: https://oeis.org/A000170/b000170.txt
      */
     static const long long known[] = {
         0,              /* N = 0, unused */
@@ -95,6 +97,17 @@ long long expected_solutions(int n)
         365596,         /* N = 14 */
         2279184,        /* N = 15 */
         14772512,       /* N = 16 */
+        95815104,       /* N = 17 */
+        666090624,      /* N = 18 */
+        4968057848LL,   /* N = 19 */
+        39029188884LL,  /* N = 20 */
+        314666222712LL, /* N = 21 */
+        2691008701644LL, /* N = 22 */
+        24233937684440LL, /* N = 23 */
+        227514171973736LL, /* N = 24 */
+        2207893435808352LL, /* N = 25 */
+        22317699616364044LL, /* N = 26 */
+        234907967154122528LL, /* N = 27 */
     };
     int table_size = (int)(sizeof(known) / sizeof(known[0]));
 

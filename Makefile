@@ -1,35 +1,60 @@
 # Makefile for the N-Queens project.
 #
-#   make          build ./nqueens
-#   make check    run N = 4 through 12 and confirm the counts are correct
-#   make clean    remove build files
-#
-# To add a parallel version, add a target that links your .c file with
-# utils.o. For example:
-#
-#   nqueens_omp: nqueens_omp.c utils.o utils.h
-#   	$(CC) $(CFLAGS) -fopenmp -o $@ nqueens_omp.c utils.o
-#
-#   nqueens_mpi: nqueens_mpi.c utils.o utils.h
-#   	mpicc $(CFLAGS) -o $@ nqueens_mpi.c utils.o
+#   make / make check                 build / test all versions (N = 4..16)
+#   make mpi / openmp / hybrid        build one version
+#   make check-mpi / check-openmp / check-hybrid   test one version
+#   make check-mpi N="16 17" WORKERS=4  choose cases and parallel workers
+#   make check-hybrid N=17 WORKERS=2 THREADS=4   processes and threads/process
+#   make openmp-static / openmp-dynamic (or check-openmp-static / check-openmp-dynamic)
+#   make clean                        remove build files
 
 CC     = gcc
+MPICC  ?= mpicc
 CFLAGS = -std=c11 -O2 -Wall -Wextra
+N      ?= 4 5 6 7 8 9 10 11 12 13 14 15 16
+WORKERS ?= 4
+THREADS ?= 4
 
-all: nqueens
+all: mpi openmp hybrid
 
-nqueens: nqueens.c utils.o utils.h
-	$(CC) $(CFLAGS) -o $@ nqueens.c utils.o
+mpi: mpi_nqueens
+openmp: openmp-static openmp-dynamic
+openmp-static: openmp_static_nqueens
+openmp-dynamic: openmp_dynamic_nqueens
+hybrid: hybrid_nqueens
+
+mpi_nqueens: mpi_nqueens.c utils.o utils.h
+	$(MPICC) $(CFLAGS) -o $@ $< utils.o
+
+openmp_static_nqueens openmp_dynamic_nqueens: %: %.c utils.o utils.h
+	$(CC) $(CFLAGS) -fopenmp -o $@ $< utils.o
+
+hybrid_nqueens: hybrid_nqueens.c utils.o utils.h
+	$(MPICC) $(CFLAGS) -fopenmp -o $@ $< utils.o
 
 utils.o: utils.c utils.h
 	$(CC) $(CFLAGS) -c utils.c
 
-check: nqueens
-	@for n in 4 5 6 7 8 9 10 11 12 13 14 15 16; do \
-		./nqueens $$n | grep Solutions | sed "s/^/N=$$n  /"; \
+check: check-mpi check-openmp check-hybrid
+check-openmp: check-openmp-static check-openmp-dynamic
+
+check-mpi: RUN = mpirun -np $(WORKERS)
+check-openmp-static check-openmp-dynamic: RUN = env OMP_NUM_THREADS=$(WORKERS) OMP_DYNAMIC=FALSE
+check-hybrid: RUN = env OMP_NUM_THREADS=$(THREADS) OMP_DYNAMIC=FALSE mpirun -np $(WORKERS)
+
+check-mpi: mpi_nqueens
+check-openmp-static: openmp_static_nqueens
+check-openmp-dynamic: openmp_dynamic_nqueens
+check-hybrid: hybrid_nqueens
+
+check-mpi check-openmp-static check-openmp-dynamic check-hybrid:
+	@for n in $(N); do \
+		result=$$($(RUN) ./$< $$n) || exit 1; \
+		printf '%s\n' "$$result" | grep -E 'Solutions|Time' | sed "s/^/$(patsubst check-%,%,$@) N=$$n  /"; \
+		printf '%s\n' "$$result" | grep -q '(correct)' || exit 1; \
 	done
 
 clean:
-	rm -f nqueens *.o
+	rm -f nqueens mpi_nqueens openmp_nqueens openmp_static_nqueens openmp_dynamic_nqueens hybrid_nqueens *.o
 
-.PHONY: all check clean
+.PHONY: all mpi openmp openmp-static openmp-dynamic hybrid check check-mpi check-openmp check-openmp-static check-openmp-dynamic check-hybrid clean

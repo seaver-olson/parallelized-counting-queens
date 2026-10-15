@@ -1,22 +1,23 @@
 /*
- * nqueens.c
+ * MPI N-Queens solver: distribute first-row branches across processes.
  *
- * Serial program that counts the solutions to the N-Queens problem:
+ * Parallel program that counts the solutions to the N-Queens problem:
  * the number of ways to place N queens on an N x N chessboard so that no
  * two queens share a row, column, or diagonal.
  *
- * Build:  make
- * Run:    ./nqueens N        (for example: ./nqueens 10)
+ * Build:  make mpi
+ * Run:    mpirun -np 4 ./mpi_nqueens N
  *
  * Every solution has exactly one queen in each row, so we fill the board
- * one row at a time, top to bottom. In each row we try every column. If a
- * square is not attacked by any queen already on the board, we place a
- * queen there and move on to the next row. When the last row is filled we
- * have found one solution. Afterward we remove the queen and try the next
- * column. This is called recursive backtracking.
+ * one row at a time, top to bottom. Bitmasks track occupied columns and
+ * diagonal attacks so we visit only legal squares. Passing masks by value
+ * preserves the previous row's state for recursive backtracking. Mirror
+ * symmetry lets us search half the first row and double its count; an odd
+ * board's center column is counted once. Each process searches its assigned
+ * branches serially, then MPI_Reduce sums their counts on process 0.
  *
- * Everything that is not part of the search (reading N, timing, checking
- * the answer, printing) is in utils.c. Feel free to use any of the material
+ * Reading N, checking the answer, and printing are in utils.c; timing uses
+ * MPI_Wtime(). Feel free to use any of the material
  * from utils.c in your own code, but I recommend against changing it.
  * You are also welcome to add to utils.c and to use anything from this file
  * in your own code. You may also add new files to the project.
@@ -37,63 +38,38 @@
  * This code was built with the help of AI tools, including Anthropic's Claude
  * Opus 5.5 and Qwen-25B-Flash. AI tools were used to assist in proofreading, splitting
  * functions, and structuring comments. Testing was performed manually.
+ * OpenAI Codex assisted with bitmask backtracking, mirror symmetry, and MPI.
  */
 
-#include <stdbool.h>
-#include <stdlib.h>
+#include <mpi.h>
 
 #include "utils.h"
 
-/* Board size set in main(). */
-int n;
+/* Low N bits mark the board's columns. Set once in main(). */
+static unsigned all;
 
 /*
- * The board array sa a 1D array of ints 
- * queens[row] is the column of the queen in that row.
- * Only rows 0 through (current row - 1) contain valid entries during the search.
+ * Count completions using occupied columns and diagonal attacks in this row.
  */
-int queens[MAX_N];
-
-/*
- * Return true if a queen at (row, col) is not attacked by any queen
- * in the rows above it.
- */
-bool is_safe(int row, int col)
+unsigned long long solve(unsigned columns, unsigned left, unsigned right)
 {
-    for (int r = 0; r < row; r++) {
-        int c = queens[r];
-
-        /* Same column. */
-        if (c == col) {
-            return false;
-        }
-
-        /* Same diagonal: the row distance equals the column distance. */
-        if (abs(c - col) == row - r) {
-            return false;
-        }
-    }
-    return true;
-}
-
-/*
- * Count all solutions that can be reached from the current board, given
- * that rows 0 through row-1 already have a queen.
- */
-unsigned long long solve(int row)
-{
-    /* All N rows have a queen */
-    if (row == n) {
+    /* One queen per row and column: all columns filled means N queens. */
+    if (columns == all) {
         return 1;
     }
 
     unsigned long long count = 0;
+    unsigned available = all & ~(columns | left | right);
 
-    for (int col = 0; col < n; col++) {
-        if (is_safe(row, col)) {
-            queens[row] = col;           /* place a queen */
-            count += solve(row + 1);     /* fill the remaining rows */
-        }
+    while (available) {
+        /* Select the lowest legal bit, then remove it from this row's choices. */
+        unsigned queen = available & (0u - available);
+        available &= available - 1u;
+
+        /* Diagonal attacks move one column sideways in the next row. */
+        count += solve(columns | queen,
+                       ((left | queen) << 1) & all,
+                       (right | queen) >> 1);
     }
 
     return count;
@@ -101,13 +77,33 @@ unsigned long long solve(int row)
 
 int main(int argc, char *argv[])
 {
-    n = parse_board_size(argc, argv);
+    int n = parse_board_size(argc, argv);
+    MPI_Init(&argc, &argv);
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    all = (1u << n) - 1u;
 
-    double start = get_time();
-    unsigned long long count = solve(0);
-    double end = get_time();
+    MPI_Barrier(MPI_COMM_WORLD);
+    double start = MPI_Wtime();
+    unsigned long long local_count = 0;
 
-    print_results("serial", n, count, end - start);
+    /* Assign columns round-robin; double mirrored branches, but not the center. */
+    for (int col = rank; col < (n + 1) / 2; col += size) {
+        unsigned queen = 1u << col;
+        local_count += solve(queen, queen << 1, queen >> 1)
+                       * (col < n / 2 ? 2 : 1);
+    }
+
+    unsigned long long count = 0;
+    MPI_Reduce(&local_count, &count, 1, MPI_UNSIGNED_LONG_LONG, MPI_SUM,
+               0, MPI_COMM_WORLD);
+    double end = MPI_Wtime();
+
+    if (rank == 0) {
+        print_results("mpi", n, count, end - start);
+    }
+    MPI_Finalize();
 
     return 0;
 }
