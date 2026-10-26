@@ -24,9 +24,11 @@ large boards take rapidly increasing time. Expected counts come from
 Compare the printed `Time` values with equal total worker counts; MPI process
 startup is outside the printed timer.
 
-MPI assigns first-row branches to processes. OpenMP static assigns them to threads
-in advance; OpenMP dynamic hands out branches as threads finish. Hybrid assigns
+MPI and OpenMP distribute legal placements in the first two rows. Static scheduling
+assigns tasks in advance; dynamic scheduling hands them out as threads finish. Hybrid assigns
 first-row branches to MPI processes and second-row placements to OpenMP threads.
 All four versions use the same recursive bitmask solver and mirror symmetry.
+The solver counts the final row directly and prunes branches when the next row
+already has no possible square. Builds use portable `-O3` optimization.
 
 # Report

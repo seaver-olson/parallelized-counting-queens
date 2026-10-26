@@ -1,5 +1,5 @@
 /*
- * OpenMP dynamic N-Queens solver: distribute first-row branches across threads.
+ * OpenMP dynamic N-Queens solver: distribute placements in the first two rows.
  *
  * Parallel program that counts the solutions to the N-Queens problem:
  * the number of ways to place N queens on an N x N chessboard so that no
@@ -9,12 +9,12 @@
  * Run:    OMP_NUM_THREADS=4 ./openmp_dynamic_nqueens N
  *
  * Every solution has exactly one queen in each row, so we fill the board
- * one row at a time, top to bottom. Bitmasks track occupied columns and
+ * one row at a time, top to bottom. Bitmasks track unused columns and
  * diagonal attacks so we visit only legal squares. Passing masks by value
  * preserves the previous row's state for recursive backtracking. Mirror
  * symmetry lets us search half the first row and double its count; an odd
- * board's center column is counted once. OpenMP distributes these branches
- * across threads and sums their counts with a reduction.
+ * board's center column is counted once. OpenMP distributes legal placements
+ * in the first two rows across threads and sums counts with a reduction.
  *
  * Reading N, checking the answer, and printing are in utils.c; timing uses
  * omp_get_wtime(). Feel free to use any of the material
@@ -49,26 +49,27 @@
 static unsigned all;
 
 /*
- * Count completions using occupied columns and diagonal attacks in this row.
+ * Count completions using unused columns and diagonal attacks in this row.
+ * remaining is nonzero; the final queen is counted without recursing.
  */
-unsigned long long solve(unsigned columns, unsigned left, unsigned right)
+unsigned long long solve(unsigned remaining, unsigned left, unsigned right)
 {
-    /* One queen per row and column: all columns filled means N queens. */
-    if (columns == all) {
-        return 1;
+    unsigned available = remaining & ~(left | right);
+    /* With one unused column, count the final row without another call. */
+    if (!(remaining & (remaining - 1u))) {
+        return available != 0;
     }
+    /* A next row with no possible square cannot be rescued by this row. */
+    if (!(remaining & ~((left << 1) | (right >> 1)))) return 0;
 
     unsigned long long count = 0;
-    unsigned available = all & ~(columns | left | right);
-
     while (available) {
         /* Select the lowest legal bit, then remove it from this row's choices. */
         unsigned queen = available & (0u - available);
         available &= available - 1u;
 
         /* Diagonal attacks move one column sideways in the next row. */
-        count += solve(columns | queen,
-                       ((left | queen) << 1) & all,
+        count += solve(remaining ^ queen, (left | queen) << 1,
                        (right | queen) >> 1);
     }
 
@@ -83,11 +84,14 @@ int main(int argc, char *argv[])
     double start = omp_get_wtime();
     unsigned long long count = 0;
 
-    /* Threads share branches; double mirrored branches, but not the center. */
+    /* Task / n is the first column; task % n is the second row's column. */
     #pragma omp parallel for reduction(+:count) schedule(dynamic, 1)
-    for (int col = 0; col < (n + 1) / 2; col++) {
-        unsigned queen = 1u << col;
-        count += solve(queen, queen << 1, queen >> 1)
+    for (int task = 0; task < ((n + 1) / 2) * n; task++) {
+        int col = task / n;
+        unsigned first = 1u << col, queen = 1u << (task % n);
+        if (queen & (first | (first << 1) | (first >> 1))) continue;
+        count += solve(all ^ (first | queen), (((first << 1) | queen) << 1) & all,
+                       ((first >> 1) | queen) >> 1)
                  * (col < n / 2 ? 2 : 1);
     }
 

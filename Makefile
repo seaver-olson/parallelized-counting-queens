@@ -10,7 +10,7 @@
 
 CC     = gcc
 MPICC  ?= mpicc
-CFLAGS = -std=c11 -O2 -Wall -Wextra
+CFLAGS = -std=c11 -O3 -Wall -Wextra
 N      ?= 4 5 6 7 8 9 10 11 12 13 14 15 16
 WORKERS ?= 4
 THREADS ?= 4

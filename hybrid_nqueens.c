@@ -9,7 +9,7 @@
  * Run:    OMP_NUM_THREADS=4 mpirun -np 2 ./hybrid_nqueens N
  *
  * Every solution has exactly one queen in each row, so we fill the board
- * one row at a time, top to bottom. Bitmasks track occupied columns and
+ * one row at a time, top to bottom. Bitmasks track unused columns and
  * diagonal attacks so we visit only legal squares. Passing masks by value
  * preserves the previous row's state for recursive backtracking. Mirror
  * symmetry lets us search half the first row and double its count; an odd
@@ -50,26 +50,27 @@
 static unsigned all;
 
 /*
- * Count completions using occupied columns and diagonal attacks in this row.
+ * Count completions using unused columns and diagonal attacks in this row.
+ * remaining is nonzero; the final queen is counted without recursing.
  */
-unsigned long long solve(unsigned columns, unsigned left, unsigned right)
+unsigned long long solve(unsigned remaining, unsigned left, unsigned right)
 {
-    /* One queen per row and column: all columns filled means N queens. */
-    if (columns == all) {
-        return 1;
+    unsigned available = remaining & ~(left | right);
+    /* With one unused column, count the final row without another call. */
+    if (!(remaining & (remaining - 1u))) {
+        return available != 0;
     }
+    /* A next row with no possible square cannot be rescued by this row. */
+    if (!(remaining & ~((left << 1) | (right >> 1)))) return 0;
 
     unsigned long long count = 0;
-    unsigned available = all & ~(columns | left | right);
-
     while (available) {
         /* Select the lowest legal bit, then remove it from this row's choices. */
         unsigned queen = available & (0u - available);
         available &= available - 1u;
 
         /* Diagonal attacks move one column sideways in the next row. */
-        count += solve(columns | queen,
-                       ((left | queen) << 1) & all,
+        count += solve(remaining ^ queen, (left | queen) << 1,
                        (right | queen) >> 1);
     }
 
@@ -105,7 +106,7 @@ int main(int argc, char *argv[])
         for (int next = 0; next < n; next++) {
             unsigned queen = 1u << next;
             if (available & queen) {
-                local_count += solve(first | queen,
+                local_count += solve(all ^ (first | queen),
                                      ((left | queen) << 1) & all,
                                      (right | queen) >> 1)
                                * (col < n / 2 ? 2 : 1);
