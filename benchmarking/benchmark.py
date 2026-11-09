@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Time the matching serial and parallel solvers, one run at a time."""
 
 import argparse
 import csv
@@ -16,7 +15,7 @@ import subprocess
 import sys
 import time
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 CPUS = len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else (os.cpu_count() or 1)
 BINARIES = {"serial": "build/nqueens", "mpi": "build/mpi_nqueens",
             "openmp-static": "build/openmp_static_nqueens", "openmp-dynamic": "build/openmp_dynamic_nqueens",
@@ -24,7 +23,7 @@ BINARIES = {"serial": "build/nqueens", "mpi": "build/mpi_nqueens",
 
 
 def stop(process):
-    """Terminate the MPI launcher and its local children as a process group."""
+    #Terminate the MPI launcher and its local children as a process group
     for sig in (signal.SIGTERM, signal.SIGKILL):
         try:
             os.killpg(process.pid, sig)
@@ -68,7 +67,7 @@ def main():
                         help="Explicit hybrid combinations, e.g. 2x2 2x4 4x4")
     parser.add_argument("--repeats", type=int, default=3)
     parser.add_argument("--timeout", type=float, default=2400, help="Wall seconds per run (default: 40 minutes)")
-    parser.add_argument("--output", type=Path, help="New CSV path; default: results/timings-TIMESTAMP.csv")
+    parser.add_argument("--output", type=Path, help="New CSV path; default: benchmarking/results/timings-TIMESTAMP.csv")
     args = parser.parse_args()
     if any(n < 4 or n > 16 for n in args.n):
         parser.error("Use N=4..16 for comparisons with the serial solver.")
@@ -94,13 +93,15 @@ def main():
             parser.error("Build the executables first with 'make all'.")
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
-    output = args.output or ROOT / "results" / f"timings-{stamp}.csv"
+    output = args.output or ROOT / "benchmarking" / "results" / f"timings-{stamp}.csv"
+    if not output.is_absolute():
+        output = ROOT / output
     metadata = output.with_suffix(".meta.json")
     if output.exists() or metadata.exists():
         parser.error("Output already exists; choose a new --output path to preserve previous results.")
     output.parent.mkdir(parents=True, exist_ok=True)
-    sources = list(ROOT.glob("*.c")) + list(ROOT.glob("*.h")) + [ROOT / "Makefile", ROOT / "benchmark.py"]
-    sources += list((ROOT / "nqueens_serial").glob("*.c")) + list((ROOT / "nqueens_serial").glob("*.h"))
+    sources = list((ROOT / "nqueens").rglob("*.c")) + list((ROOT / "nqueens").rglob("*.h"))
+    sources += [ROOT / "Makefile", Path(__file__).resolve()]
     with metadata.open("x") as stream:
         json.dump({"started_utc": stamp, "platform": platform.platform(), "available_cpus": CPUS,
                    "configuration": vars(args), "cases": cases,
@@ -134,7 +135,6 @@ def main():
                         break  # Keep this record and move to the next configuration.
     print(f"Saved {output} and {metadata}")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

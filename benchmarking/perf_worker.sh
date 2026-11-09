@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # One perf file per process. Pick a different PERF_DIR for each run.
 set -e
+repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+cd "$repo_root"
 rank=${OMPI_COMM_WORLD_RANK:-${PMI_RANK:-0}}
-dir=${PERF_DIR:-results/perf/run}
+dir=${PERF_DIR:-benchmarking/results/perf/run}
 mkdir -p "$dir"
 export LC_ALL=C
 exec perf stat --no-big-num -e \

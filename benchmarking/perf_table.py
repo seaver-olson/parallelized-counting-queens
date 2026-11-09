@@ -38,7 +38,7 @@ def show(value, digits=3):
 median_mode = "--median" in sys.argv[1:]
 filenames = [name for name in sys.argv[1:] if name != "--median"]
 if not filenames:
-    sys.exit("Usage: python3 perf_table.py results/perf/*/*.txt > results/perf/table.csv")
+    sys.exit("Usage: python3 benchmarking/perf_table.py benchmarking/results/perf/*/*.txt > benchmarking/results/perf/table.csv")
 
 table = csv.writer(sys.stdout)
 table.writerow(["configuration/worker" if median_mode else "file",

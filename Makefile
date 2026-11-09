@@ -25,19 +25,22 @@ openmp-static: build/openmp_static_nqueens
 openmp-dynamic: build/openmp_dynamic_nqueens
 hybrid: build/hybrid_nqueens
 
-build/nqueens: nqueens_serial/nqueens.c build/utils.o utils.h solve.h | build
-	$(CC) $(CFLAGS) -o $@ $< build/utils.o
+build/nqueens: nqueens/serial/nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(CC) $(CFLAGS) -Inqueens -o $@ $< build/utils.o
 
-build/mpi_nqueens: mpi_nqueens.c build/utils.o utils.h solve.h | build
-	$(MPICC) $(CFLAGS) -o $@ $< build/utils.o
+build/mpi_nqueens: nqueens/mpi_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(MPICC) $(CFLAGS) -Inqueens -o $@ $< build/utils.o
 
-build/openmp_static_nqueens build/openmp_dynamic_nqueens: build/%: %.c build/utils.o utils.h solve.h | build
-	$(CC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o
+build/openmp_static_nqueens: nqueens/openmp_static_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(CC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
 
-build/hybrid_nqueens: hybrid_nqueens.c build/utils.o utils.h solve.h | build
-	$(MPICC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o
+build/openmp_dynamic_nqueens: nqueens/openmp_dynamic_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(CC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
 
-build/utils.o: utils.c utils.h | build
+build/hybrid_nqueens: nqueens/hybrid_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(MPICC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
+
+build/utils.o: nqueens/utils.c nqueens/utils.h | build
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 build:
@@ -64,7 +67,7 @@ check-serial check-mpi check-openmp-static check-openmp-dynamic check-hybrid:
 	done
 
 benchmark: all
-	python3 benchmark.py --n $(N) $(BENCH_ARGS)
+	python3 benchmarking/benchmark.py --n $(N) $(BENCH_ARGS)
 
 clean:
 	rm -rf build
