@@ -1,0 +1,21 @@
+# started on Mon Nov  9 13:29:10 2026
+
+
+ Performance counter stats for './build/openmp_static_nqueens 18':
+
+      120265551951      task-clock                       #    1.782 CPUs utilized             
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+   <not supported>      branches:u                                                            
+   <not supported>      branch-misses:u                                                       
+   <not supported>      cache-references:u                                                    
+   <not supported>      cache-misses:u                                                        
+                59      context-switches                 #    0.491 /sec                      
+                 2      cpu-migrations                   #    0.017 /sec                      
+
+      67.504452956 seconds time elapsed
+
+     120.262126000 seconds user
+       0.000000000 seconds sys
+
+

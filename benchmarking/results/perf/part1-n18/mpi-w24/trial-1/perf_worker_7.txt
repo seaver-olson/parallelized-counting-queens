@@ -1,0 +1,21 @@
+# started on Mon Nov  9 13:21:11 2026
+
+
+ Performance counter stats for './build/mpi_nqueens 18':
+
+        7306948391      task-clock                       #    0.822 CPUs utilized             
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+   <not supported>      branches:u                                                            
+   <not supported>      branch-misses:u                                                       
+   <not supported>      cache-references:u                                                    
+   <not supported>      cache-misses:u                                                        
+                98      context-switches                 #   13.412 /sec                      
+                 1      cpu-migrations                   #    0.137 /sec                      
+
+       8.891162437 seconds time elapsed
+
+       7.231699000 seconds user
+       0.075578000 seconds sys
+
+

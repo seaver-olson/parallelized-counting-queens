@@ -1,0 +1,178 @@
+{
+  "started_utc": "20261109T190049.255815Z",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.42",
+  "available_cpus": 24,
+  "configuration": {
+    "n": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "workers": [
+      1,
+      2,
+      4,
+      8,
+      12,
+      24
+    ],
+    "hybrid": null,
+    "repeats": 3,
+    "timeout": 2400,
+    "output": null
+  },
+  "cases": [
+    [
+      "serial",
+      1,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      1
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      1
+    ],
+    [
+      "mpi",
+      1,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      2
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      2
+    ],
+    [
+      "mpi",
+      2,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      4
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      4
+    ],
+    [
+      "mpi",
+      4,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      8
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      8
+    ],
+    [
+      "mpi",
+      8,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      12
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      12
+    ],
+    [
+      "mpi",
+      12,
+      1
+    ],
+    [
+      "openmp-static",
+      1,
+      24
+    ],
+    [
+      "openmp-dynamic",
+      1,
+      24
+    ],
+    [
+      "mpi",
+      24,
+      1
+    ],
+    [
+      "hybrid",
+      1,
+      1
+    ],
+    [
+      "hybrid",
+      2,
+      1
+    ],
+    [
+      "hybrid",
+      2,
+      2
+    ],
+    [
+      "hybrid",
+      2,
+      4
+    ],
+    [
+      "hybrid",
+      2,
+      6
+    ],
+    [
+      "hybrid",
+      2,
+      12
+    ]
+  ],
+  "makeflags": "",
+  "makefile": "# Makefile for the N-Queens project.\n#   make / make check : build / test all versions (N = 4..16)\n#   make serial / check-serial : build / test the matching serial baseline\n#   make mpi / openmp / hybrid : build one version\n#   make check-mpi / check-openmp / check-hybrid : test one version\n#   make check-mpi N=\"16 17\" WORKERS=4 : choose cases and parallel workers\n#   make check-hybrid N=17 WORKERS=2 THREADS=4 : processes and threads/process\n#   make openmp-static / openmp-dynamic (or check-openmp-static / check-openmp-dynamic)\n#   make clean : remove build files\n#   make benchmark N=\"4 8 12 14 16\"  save timing sweeps as CSV\n\nCC     = gcc\nMPICC  ?= mpicc\nCFLAGS = -std=c11 -O3 -g -Wall -Wextra\nN      ?= 4 5 6 7 8 9 10 11 12 13 14 15 16\nWORKERS ?= 4\nTHREADS ?= 4\n\nall: serial mpi openmp hybrid\n\nserial: build/nqueens\nmpi: build/mpi_nqueens\nopenmp: openmp-static openmp-dynamic\nopenmp-static: build/openmp_static_nqueens\nopenmp-dynamic: build/openmp_dynamic_nqueens\nhybrid: build/hybrid_nqueens\n\nbuild/nqueens: nqueens/serial/nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build\n\t$(CC) $(CFLAGS) -o $@ $< build/utils.o\n\nbuild/mpi_nqueens: nqueens/mpi_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build\n\t$(MPICC) $(CFLAGS) -o $@ $< build/utils.o\n\nbuild/openmp_static_nqueens build/openmp_dynamic_nqueens: build/%: nqueens/%.c build/utils.o nqueens/utils.h nqueens/solve.h | build\n\t$(CC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o\n\nbuild/hybrid_nqueens: nqueens/hybrid_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build\n\t$(MPICC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o\n\nbuild/utils.o: nqueens/utils.c nqueens/utils.h | build\n\t$(CC) $(CFLAGS) -c -o $@ $<\n\nbuild:\n\tmkdir -p $@\n\ncheck: check-serial check-mpi check-openmp check-hybrid\ncheck-openmp: check-openmp-static check-openmp-dynamic\n\ncheck-mpi: RUN = mpirun -np $(WORKERS)\ncheck-openmp-static check-openmp-dynamic: RUN = env OMP_NUM_THREADS=$(WORKERS) OMP_DYNAMIC=FALSE\ncheck-hybrid: RUN = env OMP_NUM_THREADS=$(THREADS) OMP_DYNAMIC=FALSE mpirun -np $(WORKERS)\n\ncheck-serial: build/nqueens\ncheck-mpi: build/mpi_nqueens\ncheck-openmp-static: build/openmp_static_nqueens\ncheck-openmp-dynamic: build/openmp_dynamic_nqueens\ncheck-hybrid: build/hybrid_nqueens\n\ncheck-serial check-mpi check-openmp-static check-openmp-dynamic check-hybrid:\n\t@for n in $(N); do \\\n\t\tresult=$$($(RUN) ./$< $$n) || exit 1; \\\n\t\tprintf '%s\\n' \"$$result\" | grep -E 'Solutions|Time' | sed \"s/^/$(patsubst check-%,%,$@) N=$$n  /\"; \\\n\t\tprintf '%s\\n' \"$$result\" | grep -q '(correct)' || exit 1; \\\n\tdone\n\nbenchmark: all\n\tpython3 benchmarking/benchmark.py --n $(N) $(BENCH_ARGS)\n\nclean:\n\trm -rf build\n\n.PHONY: all serial mpi openmp openmp-static openmp-dynamic hybrid check check-serial check-mpi check-openmp check-openmp-static check-openmp-dynamic check-hybrid benchmark clean\n",
+  "source_sha256": {
+    "nqueens/openmp_dynamic_nqueens.c": "1e36eacece8dee33e654ca88167f8f21bbd7f423bdf17d53064b03b565e32a26",
+    "nqueens/openmp_static_nqueens.c": "c000e575edaa6650a21eede42961c47d13ac668e41d060808a0622fd0f6a15de",
+    "nqueens/utils.c": "fd8bc67d1aa0b539272c5a818c39e383d614cea8edaeecabd376d6158104ed5d",
+    "nqueens/hybrid_nqueens.c": "a31dff73bbcc837a84351cb5bfeb28afc951521d61f3be3db6142cca9ff58e16",
+    "nqueens/mpi_nqueens.c": "a34d54c5fcd54d5eaccf3656b9636b95d2b408d276f3ea7308d298ac97839618",
+    "nqueens/serial/nqueens.c": "bb97b185338d01ad203f64a77da7c96c093299d86474ba9dd1c0a317129269e2",
+    "nqueens/serial/utils.c": "dde6bbe383bcf5da5800518c7c0c8a230aa6bd821b073a67915582eacb701de9",
+    "nqueens/serial/nqueens_original.c": "88fcf2e60715114c0a2b6137fad64c21884feefea0987c0fbcbd6cba49f7dbc8",
+    "nqueens/solve.h": "c273dc0664c9629f9a2b8c5adfc9c4cdb82320e9e747a8a7beb83d956cf433d6",
+    "nqueens/utils.h": "e27c1789f6119c1eb8c39460f6b56fbced4ac09e3e166d926a283f1c733e9cc8",
+    "nqueens/serial/utils.h": "2bb17b883d1a09b67ea903f1d6d8c3f305082dcda513aa2e8c110ec61e9b23e4",
+    "Makefile": "b3d8c03c2dbc2100cec4743160a4c065480e8f92bb06b49c51c39cfc66a60036",
+    "benchmarking/benchmark.py": "72541c1a44f7c5168f23974c70156685b9e797d354e0db49567005f0dbbd2c16"
+  }
+}

@@ -1,0 +1,4 @@
+Version:   omp-static
+N:         18
+Solutions: 666090624 (correct)
+Time:      9.388212 seconds

@@ -1,0 +1,4 @@
+Version:   omp-dynamic
+N:         18
+Solutions: 666090624 (correct)
+Time:      16.753987 seconds

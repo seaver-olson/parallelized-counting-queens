@@ -1,0 +1,18 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 11K of event 'cpu-clock'
+# Event count (approx.): 119272726080
+#
+# Overhead  Shared Object      Symbol               IPC   [IPC Coverage]
+# ........  .................  ...................  ....................
+#
+    99.99%  nqueens            [.] solve            -      -            
+     0.01%  [kernel.kallsyms]  [k] handle_softirqs  -      -            
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,4 @@
+Version:   mpi
+N:         18
+Solutions: 666090624 (correct)
+Time:      117.686413 seconds

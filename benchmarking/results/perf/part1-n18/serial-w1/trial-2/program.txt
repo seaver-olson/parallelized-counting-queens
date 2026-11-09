@@ -1,0 +1,4 @@
+Version:   serial
+N:         18
+Solutions: 666090624 (correct)
+Time:      116.723876 seconds

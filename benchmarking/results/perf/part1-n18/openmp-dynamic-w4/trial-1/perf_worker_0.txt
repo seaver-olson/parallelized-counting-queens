@@ -1,0 +1,21 @@
+# started on Mon Nov  9 13:18:13 2026
+
+
+ Performance counter stats for './build/openmp_dynamic_nqueens 18':
+
+      130207935734      task-clock                       #    3.967 CPUs utilized             
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+   <not supported>      branches:u                                                            
+   <not supported>      branch-misses:u                                                       
+   <not supported>      cache-references:u                                                    
+   <not supported>      cache-misses:u                                                        
+                49      context-switches                 #    0.376 /sec                      
+                 5      cpu-migrations                   #    0.038 /sec                      
+
+      32.825682422 seconds time elapsed
+
+     130.207708000 seconds user
+       0.000000000 seconds sys
+
+

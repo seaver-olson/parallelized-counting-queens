@@ -1,0 +1,21 @@
+# started on Mon Nov  9 13:21:20 2026
+
+
+ Performance counter stats for './build/nqueens 18':
+
+      116752995851      task-clock                       #    1.000 CPUs utilized             
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+   <not supported>      branches:u                                                            
+   <not supported>      branch-misses:u                                                       
+   <not supported>      cache-references:u                                                    
+   <not supported>      cache-misses:u                                                        
+                85      context-switches                 #    0.728 /sec                      
+                 7      cpu-migrations                   #    0.060 /sec                      
+
+     116.724648478 seconds time elapsed
+
+     116.753198000 seconds user
+       0.000000000 seconds sys
+
+

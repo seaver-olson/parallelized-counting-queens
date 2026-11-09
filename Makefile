@@ -26,19 +26,16 @@ openmp-dynamic: build/openmp_dynamic_nqueens
 hybrid: build/hybrid_nqueens
 
 build/nqueens: nqueens/serial/nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
-	$(CC) $(CFLAGS) -Inqueens -o $@ $< build/utils.o
+	$(CC) $(CFLAGS) -o $@ $< build/utils.o
 
 build/mpi_nqueens: nqueens/mpi_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
-	$(MPICC) $(CFLAGS) -Inqueens -o $@ $< build/utils.o
+	$(MPICC) $(CFLAGS) -o $@ $< build/utils.o
 
-build/openmp_static_nqueens: nqueens/openmp_static_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
-	$(CC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
-
-build/openmp_dynamic_nqueens: nqueens/openmp_dynamic_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
-	$(CC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
+build/openmp_static_nqueens build/openmp_dynamic_nqueens: build/%: nqueens/%.c build/utils.o nqueens/utils.h nqueens/solve.h | build
+	$(CC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o
 
 build/hybrid_nqueens: nqueens/hybrid_nqueens.c build/utils.o nqueens/utils.h nqueens/solve.h | build
-	$(MPICC) $(CFLAGS) -Inqueens -fopenmp -o $@ $< build/utils.o
+	$(MPICC) $(CFLAGS) -fopenmp -o $@ $< build/utils.o
 
 build/utils.o: nqueens/utils.c nqueens/utils.h | build
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -60,7 +57,7 @@ check-openmp-dynamic: build/openmp_dynamic_nqueens
 check-hybrid: build/hybrid_nqueens
 
 check-serial check-mpi check-openmp-static check-openmp-dynamic check-hybrid:
-	@for n in $(N); do \ 
+	@for n in $(N); do \
 		result=$$($(RUN) ./$< $$n) || exit 1; \
 		printf '%s\n' "$$result" | grep -E 'Solutions|Time' | sed "s/^/$(patsubst check-%,%,$@) N=$$n  /"; \
 		printf '%s\n' "$$result" | grep -q '(correct)' || exit 1; \

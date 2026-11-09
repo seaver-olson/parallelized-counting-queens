@@ -1,0 +1,15 @@
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve 10101010
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve 20202020
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve 20202020
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve 414141410
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve 888888880
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve 2555555530
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve 6303030240
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 6383838320
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 30414141110
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;asm_sysvec_hyperv_stimer0;sysvec_hyperv_stimer0;irq_exit_rcu;__irq_exit_rcu;handle_softirqs 10101010
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 27909090630
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 23474747240
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 13555555420
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 6878787810
+nqueens;_start;__libc_start_main;[libc.so.6];main;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve;solve 434343430

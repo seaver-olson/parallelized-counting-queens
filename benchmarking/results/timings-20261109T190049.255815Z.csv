@@ -1,0 +1,976 @@
+version,n,workers,ranks,threads,trial,solver_seconds,wall_seconds,solutions,status,command
+serial,4,1,1,1,1,1e-06,0.000677,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 4
+serial,4,1,1,1,2,1e-06,0.000569,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 4
+serial,4,1,1,1,3,1e-06,0.000539,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 4
+openmp-static,4,1,1,1,1,3e-06,0.001669,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,1,1,1,2,3e-06,0.000615,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,1,1,1,3,3e-06,0.000602,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,1,1,1,1,3e-06,0.000561,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,1,1,1,2,3e-06,0.000602,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,1,1,1,3,4e-06,0.000694,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,1,1,1,1,0.000279,0.100262,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,1,1,1,2,2e-06,0.060178,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,1,1,1,3,2e-06,0.059390,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+openmp-static,4,2,1,2,1,5.8e-05,0.000740,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,2,1,2,2,5.6e-05,0.000716,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,2,1,2,3,5.6e-05,0.000723,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,2,1,2,1,5.6e-05,0.000623,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,2,1,2,2,5.8e-05,0.000741,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,2,1,2,3,5.8e-05,0.000593,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,2,2,1,1,0.000235,0.063389,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,2,2,1,2,9e-06,0.062058,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,2,2,1,3,9e-06,0.061592,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+openmp-static,4,4,1,4,1,0.000141,0.000867,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,4,1,4,2,0.000133,0.000950,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,4,1,4,3,0.000164,0.000811,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,4,1,4,1,0.000151,0.000724,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,4,1,4,2,0.000117,0.000771,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,4,1,4,3,0.000138,0.000733,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,4,4,1,1,1.5e-05,0.066331,2,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,4,4,1,2,1.2e-05,0.063177,2,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,4,4,1,3,1.6e-05,0.063757,2,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+openmp-static,4,8,1,8,1,0.000302,0.001275,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,8,1,8,2,0.000254,0.001031,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,8,1,8,3,0.000315,0.001156,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,8,1,8,1,0.000372,0.001158,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,8,1,8,2,0.000262,0.001105,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,8,1,8,3,0.000286,0.000887,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,8,8,1,1,2.6e-05,0.071945,2,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,8,8,1,2,2e-05,0.068263,2,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,8,8,1,3,7.4e-05,0.066810,2,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+openmp-static,4,12,1,12,1,0.000393,0.001244,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,12,1,12,2,0.000352,0.000996,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,12,1,12,3,0.000366,0.001036,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,12,1,12,1,0.0004,0.001113,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,12,1,12,2,0.000405,0.001071,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,12,1,12,3,0.000411,0.001108,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,12,12,1,1,3.7e-05,0.080152,2,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,12,12,1,2,2.6e-05,0.079971,2,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,12,12,1,3,3.1e-05,0.076855,2,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+openmp-static,4,24,1,24,1,0.01237,0.013301,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,24,1,24,2,0.006899,0.007850,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-static,4,24,1,24,3,0.006907,0.007905,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 4
+openmp-dynamic,4,24,1,24,1,0.006866,0.007786,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,24,1,24,2,0.007211,0.008498,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+openmp-dynamic,4,24,1,24,3,0.010208,0.011414,2,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 4
+mpi,4,24,24,1,1,0.000102,0.111633,2,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,24,24,1,2,0.000153,0.173929,2,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+mpi,4,24,24,1,3,0.000146,0.123179,2,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 4
+hybrid,4,1,1,1,1,1e-05,0.059147,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,1,1,1,2,8e-06,0.059229,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,1,1,1,3,9e-06,0.058821,2,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,2,2,1,1,1.4e-05,0.059917,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,2,2,1,2,2.4e-05,0.060011,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,2,2,1,3,2.1e-05,0.059611,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,4,2,2,1,0.000146,0.060300,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,4,2,2,2,0.003001,0.069072,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,4,2,2,3,0.001853,0.075487,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,8,2,4,1,0.000949,0.074555,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,8,2,4,2,0.002516,0.076681,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,8,2,4,3,0.000274,0.082098,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,12,2,6,1,0.000482,0.062571,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,12,2,6,2,0.000301,0.061975,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,12,2,6,3,0.000918,0.064783,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,24,2,12,1,0.015519,0.080240,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,24,2,12,2,0.007593,0.073329,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+hybrid,4,24,2,12,3,0.007699,0.071983,2,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 4
+serial,5,1,1,1,1,1e-06,0.000646,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 5
+serial,5,1,1,1,2,1e-06,0.000569,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 5
+serial,5,1,1,1,3,1e-06,0.000547,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 5
+openmp-static,5,1,1,1,1,4e-06,0.000607,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,1,1,1,2,3e-06,0.000800,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,1,1,1,3,4e-06,0.000652,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,1,1,1,1,4e-06,0.000739,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,1,1,1,2,3e-06,0.000752,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,1,1,1,3,4e-06,0.000617,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,1,1,1,1,3e-06,0.062088,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,1,1,1,2,3e-06,0.059481,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,1,1,1,3,3e-06,0.059932,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+openmp-static,5,2,1,2,1,6.7e-05,0.000804,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,2,1,2,2,6.7e-05,0.000716,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,2,1,2,3,6.3e-05,0.000707,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,2,1,2,1,6.2e-05,0.000698,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,2,1,2,2,0.000106,0.000666,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,2,1,2,3,6.4e-05,0.000677,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,2,2,1,1,9e-06,0.061036,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,2,2,1,2,9e-06,0.060211,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,2,2,1,3,9e-06,0.060473,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+openmp-static,5,4,1,4,1,0.000134,0.000867,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,4,1,4,2,0.000129,0.000809,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,4,1,4,3,0.00012,0.000753,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,4,1,4,1,0.000136,0.000763,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,4,1,4,2,0.00016,0.000766,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,4,1,4,3,0.000116,0.000710,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,4,4,1,1,1.4e-05,0.065983,10,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,4,4,1,2,1.2e-05,0.062420,10,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,4,4,1,3,1.5e-05,0.063023,10,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+openmp-static,5,8,1,8,1,0.000296,0.001051,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,8,1,8,2,0.000278,0.000978,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,8,1,8,3,0.000234,0.000832,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,8,1,8,1,0.000227,0.000850,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,8,1,8,2,0.000278,0.000889,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,8,1,8,3,0.000287,0.000898,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,8,8,1,1,2.5e-05,0.074282,10,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,8,8,1,2,3.5e-05,0.066606,10,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,8,8,1,3,2.4e-05,0.067257,10,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+openmp-static,5,12,1,12,1,0.000352,0.001132,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,12,1,12,2,0.000345,0.001009,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,12,1,12,3,0.000355,0.000972,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,12,1,12,1,0.000363,0.001144,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,12,1,12,2,0.000421,0.001119,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,12,1,12,3,0.000573,0.001331,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,12,12,1,1,3.1e-05,0.079502,10,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,12,12,1,2,3.8e-05,0.078929,10,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,12,12,1,3,3.2e-05,0.077930,10,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+openmp-static,5,24,1,24,1,0.002201,0.003170,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,24,1,24,2,0.011559,0.012571,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-static,5,24,1,24,3,0.012917,0.014028,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 5
+openmp-dynamic,5,24,1,24,1,0.006694,0.007678,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,24,1,24,2,0.006911,0.008107,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+openmp-dynamic,5,24,1,24,3,0.012202,0.013273,10,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 5
+mpi,5,24,24,1,1,0.000134,0.122025,10,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,24,24,1,2,0.000125,0.107226,10,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+mpi,5,24,24,1,3,0.00012,0.110970,10,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 5
+hybrid,5,1,1,1,1,1.1e-05,0.059566,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,1,1,1,2,8e-06,0.059110,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,1,1,1,3,1e-05,0.059108,10,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,2,2,1,1,1.2e-05,0.060595,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,2,2,1,2,1.5e-05,0.060150,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,2,2,1,3,1.8e-05,0.083656,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,4,2,2,1,0.000103,0.060002,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,4,2,2,2,0.00012,0.060841,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,4,2,2,3,0.000134,0.061175,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,8,2,4,1,0.000526,0.061560,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,8,2,4,2,0.00026,0.061801,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,8,2,4,3,0.002739,0.064053,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,12,2,6,1,0.006179,0.068505,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,12,2,6,2,0.001819,0.065794,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,12,2,6,3,0.000271,0.061074,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,24,2,12,1,0.003334,0.063800,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,24,2,12,2,0.00553,0.068606,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+hybrid,5,24,2,12,3,0.006366,0.069458,10,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 5
+serial,6,1,1,1,1,1e-06,0.000622,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 6
+serial,6,1,1,1,2,1e-06,0.000652,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 6
+serial,6,1,1,1,3,1e-06,0.000612,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 6
+openmp-static,6,1,1,1,1,3e-06,0.000615,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,1,1,1,2,4e-06,0.000603,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,1,1,1,3,2e-06,0.000556,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,1,1,1,1,4e-06,0.000608,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,1,1,1,2,4e-06,0.000575,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,1,1,1,3,3e-06,0.000559,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,1,1,1,1,3e-06,0.059710,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,1,1,1,2,3e-06,0.059494,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,1,1,1,3,3e-06,0.058847,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+openmp-static,6,2,1,2,1,6.2e-05,0.000766,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,2,1,2,2,5.8e-05,0.000661,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,2,1,2,3,5.7e-05,0.000676,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,2,1,2,1,5.5e-05,0.000604,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,2,1,2,2,9.9e-05,0.000652,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,2,1,2,3,5.3e-05,0.000596,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,2,2,1,1,2.1e-05,0.059698,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,2,2,1,2,1e-05,0.063659,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,2,2,1,3,1e-05,0.061055,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+openmp-static,6,4,1,4,1,0.000132,0.000909,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,4,1,4,2,0.000136,0.000918,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,4,1,4,3,0.000139,0.000760,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,4,1,4,1,0.000124,0.000754,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,4,1,4,2,0.000124,0.000733,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,4,1,4,3,0.000121,0.000752,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,4,4,1,1,1.1e-05,0.064692,4,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,4,4,1,2,1.1e-05,0.062291,4,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,4,4,1,3,1.2e-05,0.061786,4,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+openmp-static,6,8,1,8,1,0.000335,0.001019,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,8,1,8,2,0.000568,0.001291,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,8,1,8,3,0.000231,0.000888,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,8,1,8,1,0.000822,0.001421,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,8,1,8,2,0.000543,0.001163,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,8,1,8,3,0.000327,0.000943,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,8,8,1,1,2.8e-05,0.070585,4,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,8,8,1,2,1.9e-05,0.068021,4,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,8,8,1,3,2.8e-05,0.068885,4,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+openmp-static,6,12,1,12,1,0.000364,0.001108,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,12,1,12,2,0.000356,0.001166,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,12,1,12,3,0.000421,0.001065,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,12,1,12,1,0.000364,0.000963,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,12,1,12,2,0.000348,0.000985,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,12,1,12,3,0.000426,0.001037,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,12,12,1,1,2.8e-05,0.075589,4,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,12,12,1,2,2.9e-05,0.074372,4,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,12,12,1,3,3.6e-05,0.078385,4,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+openmp-static,6,24,1,24,1,0.010272,0.011322,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,24,1,24,2,0.011075,0.012160,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-static,6,24,1,24,3,0.001952,0.002876,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 6
+openmp-dynamic,6,24,1,24,1,0.013924,0.014964,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,24,1,24,2,0.006987,0.008237,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+openmp-dynamic,6,24,1,24,3,0.006795,0.007774,4,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 6
+mpi,6,24,24,1,1,6.5e-05,0.106580,4,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,24,24,1,2,5.5e-05,0.127745,4,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+mpi,6,24,24,1,3,7e-05,0.101540,4,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 6
+hybrid,6,1,1,1,1,8e-06,0.059619,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,1,1,1,2,1.2e-05,0.061515,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,1,1,1,3,1e-05,0.059098,4,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,2,2,1,1,1.3e-05,0.059813,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,2,2,1,2,1.4e-05,0.059775,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,2,2,1,3,1.3e-05,0.059538,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,4,2,2,1,0.000142,0.060126,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,4,2,2,2,0.000117,0.060356,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,4,2,2,3,0.000123,0.059784,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,8,2,4,1,0.005951,0.067433,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,8,2,4,2,0.002341,0.062971,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,8,2,4,3,0.002847,0.064056,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,12,2,6,1,0.002751,0.065725,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,12,2,6,2,0.000706,0.063538,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,12,2,6,3,0.005077,0.068029,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,24,2,12,1,0.005544,0.066057,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,24,2,12,2,0.001881,0.062754,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+hybrid,6,24,2,12,3,0.001281,0.062235,4,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 6
+serial,7,1,1,1,1,2e-06,0.000582,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 7
+serial,7,1,1,1,2,2e-06,0.000545,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 7
+serial,7,1,1,1,3,2e-06,0.000547,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 7
+openmp-static,7,1,1,1,1,5e-06,0.000648,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,1,1,1,2,5e-06,0.000589,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,1,1,1,3,4e-06,0.000554,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,1,1,1,1,4e-06,0.000533,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,1,1,1,2,4e-06,0.000634,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,1,1,1,3,5e-06,0.000612,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,1,1,1,1,4e-06,0.060225,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,1,1,1,2,4e-06,0.062398,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,1,1,1,3,4e-06,0.059325,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+openmp-static,7,2,1,2,1,6.8e-05,0.000740,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,2,1,2,2,6.6e-05,0.000664,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,2,1,2,3,8.1e-05,0.000666,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,2,1,2,1,5.8e-05,0.000628,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,2,1,2,2,5.9e-05,0.000598,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,2,1,2,3,6e-05,0.000629,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,2,2,1,1,9e-06,0.062254,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,2,2,1,2,9e-06,0.062422,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,2,2,1,3,9e-06,0.060638,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+openmp-static,7,4,1,4,1,0.000151,0.000855,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,4,1,4,2,0.000148,0.000767,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,4,1,4,3,0.000126,0.000715,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,4,1,4,1,0.000138,0.000798,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,4,1,4,2,0.000127,0.000754,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,4,1,4,3,0.000115,0.000698,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,4,4,1,1,1.2e-05,0.062859,40,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,4,4,1,2,1.2e-05,0.062648,40,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,4,4,1,3,1.1e-05,0.062715,40,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+openmp-static,7,8,1,8,1,0.000263,0.001088,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,8,1,8,2,0.000249,0.000900,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,8,1,8,3,0.00035,0.000958,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,8,1,8,1,0.000257,0.000977,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,8,1,8,2,0.00028,0.000872,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,8,1,8,3,0.000275,0.000893,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,8,8,1,1,2.1e-05,0.069275,40,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,8,8,1,2,1.9e-05,0.072006,40,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,8,8,1,3,1.9e-05,0.071508,40,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+openmp-static,7,12,1,12,1,0.000683,0.001929,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,12,1,12,2,0.000346,0.001042,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,12,1,12,3,0.000321,0.000947,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,12,1,12,1,0.000323,0.000949,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,12,1,12,2,0.000364,0.000995,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,12,1,12,3,0.000395,0.001059,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,12,12,1,1,2.7e-05,0.077719,40,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,12,12,1,2,7.5e-05,0.074815,40,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,12,12,1,3,2.8e-05,0.075900,40,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+openmp-static,7,24,1,24,1,0.010197,0.011263,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,24,1,24,2,0.010755,0.011739,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-static,7,24,1,24,3,0.012968,0.014119,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 7
+openmp-dynamic,7,24,1,24,1,0.007243,0.008275,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,24,1,24,2,0.006797,0.007944,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+openmp-dynamic,7,24,1,24,3,0.001432,0.002312,40,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 7
+mpi,7,24,24,1,1,0.000145,0.109826,40,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,24,24,1,2,9.2e-05,0.099616,40,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+mpi,7,24,24,1,3,5.4e-05,0.102058,40,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 7
+hybrid,7,1,1,1,1,9e-06,0.059816,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,1,1,1,2,1.2e-05,0.059186,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,1,1,1,3,1.2e-05,0.059170,40,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,2,2,1,1,1.8e-05,0.060102,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,2,2,1,2,1.4e-05,0.060432,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,2,2,1,3,1.6e-05,0.059975,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,4,2,2,1,9.5e-05,0.059900,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,4,2,2,2,0.000137,0.059972,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,4,2,2,3,0.000235,0.061589,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,8,2,4,1,0.006782,0.068989,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,8,2,4,2,0.001242,0.063731,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,8,2,4,3,0.000499,0.064878,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,12,2,6,1,0.003175,0.067863,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,12,2,6,2,0.00027,0.063524,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,12,2,6,3,0.000677,0.062682,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,24,2,12,1,0.005627,0.068271,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,24,2,12,2,0.028342,0.093077,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+hybrid,7,24,2,12,3,0.00417,0.067171,40,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 7
+serial,8,1,1,1,1,5e-06,0.000590,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 8
+serial,8,1,1,1,2,5e-06,0.000537,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 8
+serial,8,1,1,1,3,5e-06,0.000635,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 8
+openmp-static,8,1,1,1,1,8e-06,0.000602,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,1,1,1,2,8e-06,0.000582,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,1,1,1,3,6e-06,0.000536,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,1,1,1,1,8e-06,0.000559,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,1,1,1,2,9e-06,0.000618,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,1,1,1,3,7e-06,0.000610,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,1,1,1,1,7e-06,0.059614,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,1,1,1,2,7e-06,0.060738,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,1,1,1,3,7e-06,0.058898,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+openmp-static,8,2,1,2,1,8.8e-05,0.000790,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,2,1,2,2,6e-05,0.000630,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,2,1,2,3,5.6e-05,0.000630,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,2,1,2,1,6.3e-05,0.000638,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,2,1,2,2,5.8e-05,0.000586,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,2,1,2,3,6e-05,0.000664,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,2,2,1,1,1e-05,0.073520,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,2,2,1,2,1.3e-05,0.061808,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,2,2,1,3,1e-05,0.060395,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+openmp-static,8,4,1,4,1,0.000174,0.000835,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,4,1,4,2,0.000164,0.000819,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,4,1,4,3,0.000122,0.000690,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,4,1,4,1,0.000116,0.000720,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,4,1,4,2,0.000123,0.000708,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,4,1,4,3,0.000213,0.000763,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,4,4,1,1,1.3e-05,0.063539,92,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,4,4,1,2,3.6e-05,0.061811,92,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,4,4,1,3,1.2e-05,0.061848,92,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+openmp-static,8,8,1,8,1,0.000294,0.000989,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,8,1,8,2,0.000231,0.000839,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,8,1,8,3,0.000236,0.000805,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,8,1,8,1,0.000293,0.000972,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,8,1,8,2,0.000331,0.001006,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,8,1,8,3,0.00042,0.001020,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,8,8,1,1,2.2e-05,0.069867,92,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,8,8,1,2,3e-05,0.067992,92,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,8,8,1,3,1.6e-05,0.065603,92,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+openmp-static,8,12,1,12,1,0.000354,0.001206,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,12,1,12,2,0.000339,0.001051,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,12,1,12,3,0.000344,0.000980,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,12,1,12,1,0.000347,0.001041,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,12,1,12,2,0.000323,0.000945,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,12,1,12,3,0.000332,0.001006,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,12,12,1,1,3.1e-05,0.076427,92,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,12,12,1,2,3.1e-05,0.075858,92,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,12,12,1,3,0.000136,0.079134,92,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+openmp-static,8,24,1,24,1,0.005159,0.006115,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,24,1,24,2,0.006975,0.007882,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-static,8,24,1,24,3,0.00714,0.008096,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 8
+openmp-dynamic,8,24,1,24,1,0.00663,0.007824,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,24,1,24,2,0.006687,0.007662,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+openmp-dynamic,8,24,1,24,3,0.012817,0.013812,92,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 8
+mpi,8,24,24,1,1,0.000134,0.105549,92,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,24,24,1,2,7e-05,0.116709,92,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+mpi,8,24,24,1,3,0.000259,0.106216,92,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 8
+hybrid,8,1,1,1,1,1.5e-05,0.059693,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,1,1,1,2,1.4e-05,0.059540,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,1,1,1,3,1.6e-05,0.058987,92,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,2,2,1,1,1.5e-05,0.060039,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,2,2,1,2,2.1e-05,0.060682,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,2,2,1,3,1.7e-05,0.060251,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,4,2,2,1,0.000316,0.061094,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,4,2,2,2,0.000135,0.060447,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,4,2,2,3,0.000134,0.060048,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,8,2,4,1,0.000482,0.061020,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,8,2,4,2,0.00022,0.064877,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,8,2,4,3,0.000192,0.060538,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,12,2,6,1,0.000583,0.062495,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,12,2,6,2,0.000365,0.061417,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,12,2,6,3,0.000503,0.062458,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,24,2,12,1,0.006485,0.071733,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,24,2,12,2,0.000483,0.061434,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+hybrid,8,24,2,12,3,0.005693,0.071503,92,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 8
+serial,9,1,1,1,1,2.1e-05,0.000646,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 9
+serial,9,1,1,1,2,2.1e-05,0.000537,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 9
+serial,9,1,1,1,3,2e-05,0.000570,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 9
+openmp-static,9,1,1,1,1,2.4e-05,0.000602,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,1,1,1,2,2.3e-05,0.000580,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,1,1,1,3,2.2e-05,0.000575,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,1,1,1,1,2.3e-05,0.000587,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,1,1,1,2,2.3e-05,0.000761,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,1,1,1,3,2.3e-05,0.000691,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,1,1,1,1,2.2e-05,0.059264,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,1,1,1,2,2.3e-05,0.060958,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,1,1,1,3,2.4e-05,0.062040,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+openmp-static,9,2,1,2,1,0.000117,0.000921,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,2,1,2,2,8.4e-05,0.000867,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,2,1,2,3,7.6e-05,0.000734,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,2,1,2,1,7.9e-05,0.000724,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,2,1,2,2,0.00011,0.000760,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,2,1,2,3,0.000101,0.000715,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,2,2,1,1,1.8e-05,0.063902,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,2,2,1,2,1.7e-05,0.064352,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,2,2,1,3,1.9e-05,0.064375,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+openmp-static,9,4,1,4,1,0.000206,0.001045,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,4,1,4,2,0.000147,0.000887,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,4,1,4,3,0.000151,0.000851,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,4,1,4,1,0.000173,0.000806,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,4,1,4,2,0.000119,0.000792,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,4,1,4,3,0.000138,0.000880,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,4,4,1,1,1.8e-05,0.068429,352,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,4,4,1,2,2.3e-05,0.065990,352,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,4,4,1,3,2.5e-05,0.066850,352,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+openmp-static,9,8,1,8,1,0.000262,0.001106,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,8,1,8,2,0.000276,0.001009,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,8,1,8,3,0.000433,0.001216,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,8,1,8,1,0.000257,0.000956,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,8,1,8,2,0.000251,0.000927,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,8,1,8,3,0.000291,0.000916,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,8,8,1,1,5.2e-05,0.077358,352,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,8,8,1,2,2.1e-05,0.071590,352,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,8,8,1,3,2.2e-05,0.067224,352,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+openmp-static,9,12,1,12,1,0.000851,0.001632,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,12,1,12,2,0.000656,0.001309,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,12,1,12,3,0.000388,0.001131,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,12,1,12,1,0.000353,0.001094,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,12,1,12,2,0.000418,0.001041,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,12,1,12,3,0.000475,0.001129,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,12,12,1,1,2.8e-05,0.077687,352,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,12,12,1,2,0.000107,0.076938,352,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,12,12,1,3,3.2e-05,0.076402,352,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+openmp-static,9,24,1,24,1,0.008134,0.009421,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,24,1,24,2,0.006588,0.007565,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-static,9,24,1,24,3,0.006905,0.008095,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 9
+openmp-dynamic,9,24,1,24,1,0.013199,0.014284,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,24,1,24,2,0.008057,0.009177,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+openmp-dynamic,9,24,1,24,3,0.006848,0.007838,352,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 9
+mpi,9,24,24,1,1,5.3e-05,0.095976,352,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,24,24,1,2,6e-05,0.098351,352,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+mpi,9,24,24,1,3,6.3e-05,0.106816,352,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 9
+hybrid,9,1,1,1,1,2.9e-05,0.059443,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,1,1,1,2,2.8e-05,0.059179,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,1,1,1,3,2.9e-05,0.059355,352,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,2,2,1,1,2.5e-05,0.059814,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,2,2,1,2,2.4e-05,0.060539,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,2,2,1,3,2.4e-05,0.060511,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,4,2,2,1,0.001384,0.061611,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,4,2,2,2,0.000258,0.060276,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,4,2,2,3,0.000126,0.060447,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,8,2,4,1,0.003035,0.063900,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,8,2,4,2,0.000261,0.062143,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,8,2,4,3,0.000573,0.062268,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,12,2,6,1,0.000357,0.064773,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,12,2,6,2,0.001466,0.063538,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,12,2,6,3,0.00383,0.068072,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,24,2,12,1,0.005221,0.067019,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,24,2,12,2,0.002133,0.070849,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+hybrid,9,24,2,12,3,0.002361,0.064615,352,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 9
+serial,10,1,1,1,1,7.2e-05,0.000686,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 10
+serial,10,1,1,1,2,7.4e-05,0.000691,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 10
+serial,10,1,1,1,3,7.6e-05,0.000618,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 10
+openmp-static,10,1,1,1,1,0.000159,0.000753,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,1,1,1,2,7.8e-05,0.000674,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,1,1,1,3,7.5e-05,0.000667,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,1,1,1,1,7.7e-05,0.000672,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,1,1,1,2,8e-05,0.000647,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,1,1,1,3,7.5e-05,0.000683,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,1,1,1,1,7.4e-05,0.059503,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,1,1,1,2,7.6e-05,0.058293,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,1,1,1,3,7.5e-05,0.058919,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+openmp-static,10,2,1,2,1,9.9e-05,0.000803,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,2,1,2,2,9.8e-05,0.000677,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,2,1,2,3,0.000326,0.000858,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,2,1,2,1,0.0001,0.000682,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,2,1,2,2,0.000146,0.000684,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,2,1,2,3,0.000113,0.000862,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,2,2,1,1,4.7e-05,0.060105,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,2,2,1,2,4.5e-05,0.059879,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,2,2,1,3,4.6e-05,0.060498,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+openmp-static,10,4,1,4,1,0.000278,0.000961,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,4,1,4,2,0.000137,0.000788,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,4,1,4,3,0.000135,0.000707,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,4,1,4,1,0.000129,0.000688,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,4,1,4,2,0.000141,0.000847,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,4,1,4,3,0.000151,0.000795,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,4,4,1,1,3e-05,0.063255,724,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,4,4,1,2,3.9e-05,0.061805,724,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,4,4,1,3,3.1e-05,0.063631,724,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+openmp-static,10,8,1,8,1,0.000388,0.001167,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,8,1,8,2,0.000263,0.000930,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,8,1,8,3,0.00029,0.000933,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,8,1,8,1,0.000242,0.000837,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,8,1,8,2,0.000293,0.000828,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,8,1,8,3,0.000254,0.000806,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,8,8,1,1,6.6e-05,0.075558,724,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,8,8,1,2,3e-05,0.066776,724,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,8,8,1,3,2.7e-05,0.067937,724,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+openmp-static,10,12,1,12,1,0.00036,0.001096,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,12,1,12,2,0.000389,0.001141,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,12,1,12,3,0.000468,0.001259,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,12,1,12,1,0.000371,0.001078,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,12,1,12,2,0.000349,0.001039,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,12,1,12,3,0.000347,0.001000,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,12,12,1,1,4.4e-05,0.077845,724,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,12,12,1,2,4.3e-05,0.077084,724,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,12,12,1,3,4.2e-05,0.077253,724,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+openmp-static,10,24,1,24,1,0.008688,0.009839,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,24,1,24,2,0.00658,0.007613,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-static,10,24,1,24,3,0.005795,0.006849,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 10
+openmp-dynamic,10,24,1,24,1,0.011562,0.012869,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,24,1,24,2,0.006769,0.007802,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+openmp-dynamic,10,24,1,24,3,0.006896,0.007894,724,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 10
+mpi,10,24,24,1,1,0.000132,0.105230,724,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,24,24,1,2,7e-05,0.104697,724,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+mpi,10,24,24,1,3,0.000127,0.107658,724,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 10
+hybrid,10,1,1,1,1,8.7e-05,0.059255,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,1,1,1,2,8.2e-05,0.058953,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,1,1,1,3,8.1e-05,0.059696,724,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,2,2,1,1,7.3e-05,0.060607,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,2,2,1,2,6.4e-05,0.062738,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,2,2,1,3,6e-05,0.063068,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,4,2,2,1,0.00024,0.062842,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,4,2,2,2,0.000151,0.062988,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,4,2,2,3,0.000174,0.064710,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,8,2,4,1,0.000432,0.067118,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,8,2,4,2,0.000219,0.064464,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,8,2,4,3,0.000275,0.067836,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,12,2,6,1,0.000336,0.063148,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,12,2,6,2,0.000537,0.064513,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,12,2,6,3,0.000322,0.064465,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,24,2,12,1,0.00119,0.065041,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,24,2,12,2,0.006829,0.072863,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+hybrid,10,24,2,12,3,0.015156,0.082462,724,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 10
+serial,11,1,1,1,1,0.000537,0.001875,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 11
+serial,11,1,1,1,2,0.000536,0.001498,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 11
+serial,11,1,1,1,3,0.000543,0.001731,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 11
+openmp-static,11,1,1,1,1,0.000506,0.001816,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,1,1,1,2,0.000551,0.001833,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,1,1,1,3,0.000419,0.001432,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,1,1,1,1,0.000406,0.001199,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,1,1,1,2,0.000402,0.001256,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,1,1,1,3,0.000374,0.001248,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,1,1,1,1,0.000367,0.062727,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,1,1,1,2,0.000375,0.059833,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,1,1,1,3,0.000372,0.059968,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+openmp-static,11,2,1,2,1,0.000255,0.001026,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,2,1,2,2,0.000255,0.000874,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,2,1,2,3,0.000274,0.000820,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,2,1,2,1,0.000259,0.000825,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,2,1,2,2,0.000272,0.000836,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,2,1,2,3,0.000256,0.000811,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,2,2,1,1,0.000206,0.060508,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,2,2,1,2,0.000205,0.061380,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,2,2,1,3,0.000204,0.061411,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+openmp-static,11,4,1,4,1,0.000246,0.001169,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,4,1,4,2,0.000274,0.000913,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,4,1,4,3,0.000244,0.000899,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,4,1,4,1,0.000292,0.001092,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,4,1,4,2,0.000226,0.000879,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,4,1,4,3,0.000294,0.000934,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,4,4,1,1,0.000124,0.064032,2680,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,4,4,1,2,0.000129,0.062279,2680,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,4,4,1,3,0.000132,0.064763,2680,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+openmp-static,11,8,1,8,1,0.000319,0.001079,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,8,1,8,2,0.00029,0.000931,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,8,1,8,3,0.000274,0.000863,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,8,1,8,1,0.000252,0.000847,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,8,1,8,2,0.00028,0.000863,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,8,1,8,3,0.000315,0.000935,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,8,8,1,1,9.6e-05,0.074524,2680,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,8,8,1,2,9.9e-05,0.068088,2680,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,8,8,1,3,0.000102,0.093579,2680,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+openmp-static,11,12,1,12,1,0.000415,0.001179,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,12,1,12,2,0.000391,0.001130,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,12,1,12,3,0.000391,0.001074,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,12,1,12,1,0.00038,0.001293,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,12,1,12,2,0.000375,0.001020,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,12,1,12,3,0.000393,0.001039,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,12,12,1,1,0.000131,0.081112,2680,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,12,12,1,2,8.9e-05,0.077960,2680,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,12,12,1,3,0.000101,0.077930,2680,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+openmp-static,11,24,1,24,1,0.012919,0.013898,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,24,1,24,2,0.010935,0.012018,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-static,11,24,1,24,3,0.012277,0.013418,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 11
+openmp-dynamic,11,24,1,24,1,0.010666,0.011662,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,24,1,24,2,0.010653,0.011917,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+openmp-dynamic,11,24,1,24,3,0.011619,0.012844,2680,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 11
+mpi,11,24,24,1,1,6.2e-05,0.105551,2680,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,24,24,1,2,0.00013,0.096966,2680,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+mpi,11,24,24,1,3,0.000168,0.101292,2680,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 11
+hybrid,11,1,1,1,1,0.000425,0.060184,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,1,1,1,2,0.000422,0.059746,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,1,1,1,3,0.000394,0.059106,2680,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,2,2,1,1,0.00021,0.059830,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,2,2,1,2,0.000202,0.059933,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,2,2,1,3,0.000208,0.062107,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,4,2,2,1,0.000227,0.060913,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,4,2,2,2,0.000366,0.060214,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,4,2,2,3,0.000378,0.060609,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,8,2,4,1,0.000481,0.063197,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,8,2,4,2,0.000366,0.061475,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,8,2,4,3,0.000308,0.061533,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,12,2,6,1,0.000346,0.062108,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,12,2,6,2,0.005511,0.067919,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,12,2,6,3,0.000706,0.065368,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,24,2,12,1,0.005793,0.070224,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,24,2,12,2,0.000376,0.061581,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+hybrid,11,24,2,12,3,0.010767,0.072638,2680,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 11
+serial,12,1,1,1,1,0.001852,0.002532,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 12
+serial,12,1,1,1,2,0.001801,0.002474,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 12
+serial,12,1,1,1,3,0.001818,0.002404,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 12
+openmp-static,12,1,1,1,1,0.001811,0.002617,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,1,1,1,2,0.001768,0.002589,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,1,1,1,3,0.001985,0.002752,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,1,1,1,1,0.001821,0.002477,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,1,1,1,2,0.001832,0.002468,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,1,1,1,3,0.001839,0.002475,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,1,1,1,1,0.001777,0.061447,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,1,1,1,2,0.00176,0.060954,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,1,1,1,3,0.001724,0.066400,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+openmp-static,12,2,1,2,1,0.000975,0.001854,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,2,1,2,2,0.001441,0.002242,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,2,1,2,3,0.001151,0.001789,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,2,1,2,1,0.001011,0.001634,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,2,1,2,2,0.000957,0.001538,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,2,1,2,3,0.000995,0.001573,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,2,2,1,1,0.000889,0.062129,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,2,2,1,2,0.000891,0.060923,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,2,2,1,3,0.000905,0.062253,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+openmp-static,12,4,1,4,1,0.000647,0.001339,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,4,1,4,2,0.00069,0.001274,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,4,1,4,3,0.000736,0.001299,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,4,1,4,1,0.000584,0.001161,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,4,1,4,2,0.000691,0.001273,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,4,1,4,3,0.00065,0.001274,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,4,4,1,1,0.000485,0.064427,14200,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,4,4,1,2,0.000472,0.064325,14200,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,4,4,1,3,0.000683,0.063264,14200,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+openmp-static,12,8,1,8,1,0.000826,0.001537,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,8,1,8,2,0.000774,0.001446,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,8,1,8,3,0.000643,0.001274,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,8,1,8,1,0.000539,0.001229,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,8,1,8,2,0.000489,0.001188,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,8,1,8,3,0.000515,0.001363,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,8,8,1,1,0.00028,0.070586,14200,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,8,8,1,2,0.000389,0.069233,14200,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,8,8,1,3,0.00034,0.068728,14200,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+openmp-static,12,12,1,12,1,0.000636,0.001375,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,12,1,12,2,0.000655,0.001327,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,12,1,12,3,0.000734,0.001546,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,12,1,12,1,0.000734,0.001447,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,12,1,12,2,0.000572,0.001278,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,12,1,12,3,0.000563,0.001275,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,12,12,1,1,0.000317,0.085039,14200,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,12,12,1,2,0.000294,0.075440,14200,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,12,12,1,3,0.000597,0.080553,14200,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+openmp-static,12,24,1,24,1,0.009215,0.010182,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,24,1,24,2,0.012328,0.013411,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-static,12,24,1,24,3,0.010696,0.011722,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 12
+openmp-dynamic,12,24,1,24,1,0.010619,0.011618,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,24,1,24,2,0.011158,0.012256,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+openmp-dynamic,12,24,1,24,3,0.010306,0.011581,14200,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 12
+mpi,12,24,24,1,1,0.000288,0.105122,14200,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,24,24,1,2,0.000192,0.100176,14200,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+mpi,12,24,24,1,3,0.00023,0.095385,14200,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 12
+hybrid,12,1,1,1,1,0.001893,0.061498,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,1,1,1,2,0.00184,0.061125,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,1,1,1,3,0.001823,0.061660,14200,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,2,2,1,1,0.000944,0.061586,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,2,2,1,2,0.00106,0.061679,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,2,2,1,3,0.000926,0.060827,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,4,2,2,1,0.000608,0.060973,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,4,2,2,2,0.001803,0.062295,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,4,2,2,3,0.000603,0.061100,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,8,2,4,1,0.000829,0.063089,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,8,2,4,2,0.000481,0.061295,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,8,2,4,3,0.000702,0.060916,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,12,2,6,1,0.000898,0.062816,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,12,2,6,2,0.004446,0.067913,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,12,2,6,3,0.005975,0.067242,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,24,2,12,1,0.00631,0.067947,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,24,2,12,2,0.005642,0.067044,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+hybrid,12,24,2,12,3,0.007593,0.070444,14200,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 12
+serial,13,1,1,1,1,0.010767,0.011406,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 13
+serial,13,1,1,1,2,0.010428,0.011121,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 13
+serial,13,1,1,1,3,0.010652,0.011466,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 13
+openmp-static,13,1,1,1,1,0.010833,0.011580,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,1,1,1,2,0.010336,0.011077,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,1,1,1,3,0.010378,0.011159,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,1,1,1,1,0.010481,0.011369,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,1,1,1,2,0.010541,0.011452,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,1,1,1,3,0.010531,0.012690,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,1,1,1,1,0.010221,0.069501,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,1,1,1,2,0.011146,0.070442,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,1,1,1,3,0.010499,0.069811,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+openmp-static,13,2,1,2,1,0.005559,0.006231,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,2,1,2,2,0.005674,0.006299,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,2,1,2,3,0.005624,0.006346,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,2,1,2,1,0.005632,0.006347,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,2,1,2,2,0.005367,0.006188,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,2,1,2,3,0.005582,0.006403,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,2,2,1,1,0.005493,0.066600,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,2,2,1,2,0.005406,0.065999,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,2,2,1,3,0.005464,0.066024,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+openmp-static,13,4,1,4,1,0.003131,0.004022,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,4,1,4,2,0.003202,0.004046,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,4,1,4,3,0.003126,0.003938,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,4,1,4,1,0.002884,0.003622,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,4,1,4,2,0.002903,0.003680,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,4,1,4,3,0.002883,0.003699,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,4,4,1,1,0.00304,0.066126,73712,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,4,4,1,2,0.002951,0.065214,73712,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,4,4,1,3,0.002839,0.066319,73712,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+openmp-static,13,8,1,8,1,0.002044,0.002877,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,8,1,8,2,0.001886,0.002631,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,8,1,8,3,0.001982,0.002745,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,8,1,8,1,0.00178,0.002555,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,8,1,8,2,0.001676,0.002440,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,8,1,8,3,0.00188,0.002681,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,8,8,1,1,0.001731,0.074303,73712,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,8,8,1,2,0.001767,0.071006,73712,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,8,8,1,3,0.001699,0.069505,73712,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+openmp-static,13,12,1,12,1,0.001877,0.002850,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,12,1,12,2,0.001901,0.002644,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,12,1,12,3,0.001904,0.002675,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,12,1,12,1,0.001664,0.002505,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,12,1,12,2,0.00151,0.002313,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,12,1,12,3,0.001423,0.002248,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,12,12,1,1,0.001405,0.076945,73712,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,12,12,1,2,0.001337,0.081705,73712,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,12,12,1,3,0.00142,0.075986,73712,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+openmp-static,13,24,1,24,1,0.012926,0.014113,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,24,1,24,2,0.008619,0.009682,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-static,13,24,1,24,3,0.013314,0.014293,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 13
+openmp-dynamic,13,24,1,24,1,0.00783,0.008806,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,24,1,24,2,0.006897,0.007881,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+openmp-dynamic,13,24,1,24,3,0.010921,0.011876,73712,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 13
+mpi,13,24,24,1,1,0.000841,0.103205,73712,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,24,24,1,2,0.002315,0.112752,73712,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+mpi,13,24,24,1,3,0.001125,0.106937,73712,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 13
+hybrid,13,1,1,1,1,0.010636,0.070398,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,1,1,1,2,0.010599,0.071121,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,1,1,1,3,0.010669,0.069576,73712,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,2,2,1,1,0.006491,0.067178,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,2,2,1,2,0.006163,0.066662,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,2,2,1,3,0.006085,0.068052,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,4,2,2,1,0.003141,0.064158,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,4,2,2,2,0.003271,0.064007,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,4,2,2,3,0.003208,0.064020,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,8,2,4,1,0.0027,0.067307,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,8,2,4,2,0.005934,0.068713,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,8,2,4,3,0.002021,0.063682,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,12,2,6,1,0.002042,0.064595,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,12,2,6,2,0.005457,0.068139,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,12,2,6,3,0.008417,0.069662,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,24,2,12,1,0.004776,0.069167,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,24,2,12,2,0.002812,0.065942,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+hybrid,13,24,2,12,3,0.002783,0.071148,73712,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 13
+serial,14,1,1,1,1,0.057097,0.057975,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 14
+serial,14,1,1,1,2,0.056731,0.057543,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 14
+serial,14,1,1,1,3,0.056148,0.056914,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 14
+openmp-static,14,1,1,1,1,0.056436,0.057316,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,1,1,1,2,0.05625,0.057103,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,1,1,1,3,0.055619,0.056560,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,1,1,1,1,0.057684,0.058485,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,1,1,1,2,0.057213,0.058165,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,1,1,1,3,0.057686,0.058582,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,1,1,1,1,0.05569,0.123522,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,1,1,1,2,0.056072,0.116175,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,1,1,1,3,0.055731,0.115079,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+openmp-static,14,2,1,2,1,0.032169,0.033021,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,2,1,2,2,0.032135,0.033133,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,2,1,2,3,0.032553,0.033419,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,2,1,2,1,0.029034,0.029979,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,2,1,2,2,0.028648,0.029627,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,2,1,2,3,0.028764,0.029734,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,2,2,1,1,0.028641,0.091686,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,2,2,1,2,0.028487,0.090430,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,2,2,1,3,0.028606,0.090065,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+openmp-static,14,4,1,4,1,0.016122,0.016884,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,4,1,4,2,0.016095,0.016926,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,4,1,4,3,0.016124,0.016976,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,4,1,4,1,0.014944,0.015828,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,4,1,4,2,0.014939,0.015834,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,4,1,4,3,0.015067,0.015956,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,4,4,1,1,0.014278,0.077992,365596,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,4,4,1,2,0.014873,0.077746,365596,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,4,4,1,3,0.014724,0.077157,365596,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+openmp-static,14,8,1,8,1,0.009722,0.010788,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,8,1,8,2,0.013167,0.014234,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,8,1,8,3,0.009745,0.010609,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,8,1,8,1,0.007604,0.008457,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,8,1,8,2,0.008369,0.009251,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,8,1,8,3,0.008242,0.009067,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,8,8,1,1,0.011807,0.081091,365596,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,8,8,1,2,0.009231,0.076488,365596,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,8,8,1,3,0.010621,0.079161,365596,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+openmp-static,14,12,1,12,1,0.008874,0.009813,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,12,1,12,2,0.009349,0.010436,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,12,1,12,3,0.008061,0.008977,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,12,1,12,1,0.006435,0.007316,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,12,1,12,2,0.006687,0.007639,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,12,1,12,3,0.006579,0.007557,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,12,12,1,1,0.006773,0.087592,365596,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,12,12,1,2,0.00706,0.084232,365596,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,12,12,1,3,0.007059,0.083725,365596,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+openmp-static,14,24,1,24,1,0.014894,0.015942,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,24,1,24,2,0.014869,0.016002,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-static,14,24,1,24,3,0.01452,0.015702,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 14
+openmp-dynamic,14,24,1,24,1,0.018341,0.019703,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,24,1,24,2,0.014799,0.016009,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+openmp-dynamic,14,24,1,24,3,0.007675,0.008748,365596,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 14
+mpi,14,24,24,1,1,0.004611,0.110813,365596,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,24,24,1,2,0.004466,0.100439,365596,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+mpi,14,24,24,1,3,0.004735,0.107423,365596,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 14
+hybrid,14,1,1,1,1,0.0561,0.116064,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,1,1,1,2,0.056825,0.116307,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,1,1,1,3,0.055386,0.116497,365596,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,2,2,1,1,0.032408,0.093668,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,2,2,1,2,0.033217,0.094960,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,2,2,1,3,0.032741,0.094510,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,4,2,2,1,0.017555,0.080617,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,4,2,2,2,0.017794,0.080204,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,4,2,2,3,0.017163,0.078737,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,8,2,4,1,0.010328,0.070914,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,8,2,4,2,0.010134,0.072361,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,8,2,4,3,0.009051,0.069667,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,12,2,6,1,0.010952,0.071329,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,12,2,6,2,0.008165,0.070151,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,12,2,6,3,0.008003,0.069801,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,24,2,12,1,0.005405,0.069436,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,24,2,12,2,0.03081,0.094243,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+hybrid,14,24,2,12,3,0.009941,0.071386,365596,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 14
+serial,15,1,1,1,1,0.368789,0.369478,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 15
+serial,15,1,1,1,2,0.377818,0.378602,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 15
+serial,15,1,1,1,3,0.370401,0.371183,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 15
+openmp-static,15,1,1,1,1,0.37551,0.376432,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,1,1,1,2,0.383679,0.384515,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,1,1,1,3,0.38085,0.381780,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,1,1,1,1,0.374481,0.375237,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,1,1,1,2,0.380509,0.381310,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,1,1,1,3,0.37766,0.378681,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,1,1,1,1,0.377568,0.437512,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,1,1,1,2,0.372563,0.431878,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,1,1,1,3,0.374792,0.434055,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+openmp-static,15,2,1,2,1,0.205604,0.206419,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,2,1,2,2,0.201065,0.201915,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,2,1,2,3,0.201038,0.201861,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,2,1,2,1,0.185265,0.186030,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,2,1,2,2,0.186456,0.187281,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,2,1,2,3,0.193751,0.194660,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,2,2,1,1,0.193363,0.253946,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,2,2,1,2,0.19459,0.255115,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,2,2,1,3,0.196191,0.256334,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+openmp-static,15,4,1,4,1,0.10111,0.101917,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,4,1,4,2,0.102574,0.103381,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,4,1,4,3,0.102396,0.103262,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,4,1,4,1,0.095855,0.096710,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,4,1,4,2,0.096033,0.096895,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,4,1,4,3,0.095376,0.096229,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,4,4,1,1,0.116138,0.179096,2279184,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,4,4,1,2,0.111827,0.173227,2279184,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,4,4,1,3,0.11256,0.175595,2279184,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+openmp-static,15,8,1,8,1,0.05769,0.058530,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,8,1,8,2,0.058541,0.059511,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,8,1,8,3,0.064111,0.065004,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,8,1,8,1,0.052007,0.052862,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,8,1,8,2,0.051059,0.051918,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,8,1,8,3,0.052272,0.053036,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,8,8,1,1,0.061758,0.131995,2279184,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,8,8,1,2,0.063907,0.130586,2279184,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,8,8,1,3,0.064672,0.132532,2279184,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+openmp-static,15,12,1,12,1,0.051293,0.052168,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,12,1,12,2,0.048881,0.049779,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,12,1,12,3,0.048573,0.049590,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,12,1,12,1,0.042524,0.043413,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,12,1,12,2,0.039237,0.040089,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,12,1,12,3,0.038989,0.039900,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,12,12,1,1,0.046645,0.125299,2279184,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,12,12,1,2,0.047682,0.125213,2279184,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,12,12,1,3,0.048774,0.127765,2279184,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+openmp-static,15,24,1,24,1,0.057979,0.058999,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,24,1,24,2,0.040993,0.042015,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-static,15,24,1,24,3,0.059689,0.060751,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 15
+openmp-dynamic,15,24,1,24,1,0.043309,0.044309,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,24,1,24,2,0.039544,0.040682,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+openmp-dynamic,15,24,1,24,3,0.034414,0.035388,2279184,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 15
+mpi,15,24,24,1,1,0.028759,0.130777,2279184,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,24,24,1,2,0.029145,0.121990,2279184,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+mpi,15,24,24,1,3,0.030413,0.127379,2279184,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 15
+hybrid,15,1,1,1,1,0.365163,0.424502,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,1,1,1,2,0.369977,0.430777,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,1,1,1,3,0.368714,0.428999,2279184,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,2,2,1,1,0.189694,0.249713,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,2,2,1,2,0.187034,0.247889,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,2,2,1,3,0.189695,0.250660,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,4,2,2,1,0.104094,0.164156,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,4,2,2,2,0.106269,0.166824,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,4,2,2,3,0.096995,0.156976,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,8,2,4,1,0.058934,0.119658,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,8,2,4,2,0.056197,0.117343,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,8,2,4,3,0.056697,0.118833,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,12,2,6,1,0.04604,0.110300,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,12,2,6,2,0.045562,0.109123,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,12,2,6,3,0.045298,0.108269,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,24,2,12,1,0.050841,0.114252,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,24,2,12,2,0.050014,0.112080,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+hybrid,15,24,2,12,3,0.060755,0.127247,2279184,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 15
+serial,16,1,1,1,1,2.287999,2.288690,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 16
+serial,16,1,1,1,2,2.28281,2.283618,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 16
+serial,16,1,1,1,3,2.28812,2.288895,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/nqueens 16
+openmp-static,16,1,1,1,1,2.33837,2.339534,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,1,1,1,2,2.316921,2.317953,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,1,1,1,3,2.321322,2.322163,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,1,1,1,1,2.281744,2.282672,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,1,1,1,2,2.277935,2.278730,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,1,1,1,3,2.275917,2.276768,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,1,1,1,1,2.354824,2.420127,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,1,1,1,2,2.348249,2.407514,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,1,1,1,3,2.362698,2.423157,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+openmp-static,16,2,1,2,1,1.284774,1.285549,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,2,1,2,2,1.276526,1.277440,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,2,1,2,3,1.279858,1.280712,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,2,1,2,1,1.166798,1.167578,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,2,1,2,2,1.162078,1.162953,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,2,1,2,3,1.165787,1.166629,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,2,2,1,1,1.189961,1.250957,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,2,2,1,2,1.187574,1.248470,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,2,2,1,3,1.182574,1.243736,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+openmp-static,16,4,1,4,1,0.668391,0.669265,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,4,1,4,2,0.666575,0.667431,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,4,1,4,3,0.644823,0.645675,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,4,1,4,1,0.59501,0.595831,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,4,1,4,2,0.598722,0.599521,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,4,1,4,3,0.601673,0.602531,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,4,4,1,1,0.610695,0.674868,14772512,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,4,4,1,2,0.596689,0.659529,14772512,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,4,4,1,3,0.609414,0.672025,14772512,correct,mpirun -np 4 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+openmp-static,16,8,1,8,1,0.376774,0.377619,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,8,1,8,2,0.36101,0.361938,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,8,1,8,3,0.361467,0.362330,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,8,1,8,1,0.327255,0.328174,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,8,1,8,2,0.335833,0.336711,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,8,1,8,3,0.330901,0.331939,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,8,8,1,1,0.36109,0.430448,14772512,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,8,8,1,2,0.362423,0.428407,14772512,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,8,8,1,3,0.34733,0.414139,14772512,correct,mpirun -np 8 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+openmp-static,16,12,1,12,1,0.301809,0.302748,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,12,1,12,2,0.294069,0.295015,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,12,1,12,3,0.300039,0.301063,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,12,1,12,1,0.248657,0.249587,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,12,1,12,2,0.243829,0.244815,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,12,1,12,3,0.24593,0.246878,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,12,12,1,1,0.269447,0.347821,14772512,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,12,12,1,2,0.277826,0.352647,14772512,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,12,12,1,3,0.265909,0.342543,14772512,correct,mpirun -np 12 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+openmp-static,16,24,1,24,1,0.221656,0.222662,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,24,1,24,2,0.196149,0.197205,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-static,16,24,1,24,3,0.205834,0.206844,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_static_nqueens 16
+openmp-dynamic,16,24,1,24,1,0.173392,0.174607,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,24,1,24,2,0.191584,0.193478,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+openmp-dynamic,16,24,1,24,3,0.164845,0.165934,14772512,correct,/home/sjols/comp364/parallelized-counting-queens/build/openmp_dynamic_nqueens 16
+mpi,16,24,24,1,1,0.181774,0.301186,14772512,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,24,24,1,2,0.170605,0.276923,14772512,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+mpi,16,24,24,1,3,0.188147,0.291430,14772512,correct,mpirun -np 24 /home/sjols/comp364/parallelized-counting-queens/build/mpi_nqueens 16
+hybrid,16,1,1,1,1,2.313904,2.373635,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,1,1,1,2,2.289719,2.350581,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,1,1,1,3,2.293286,2.353200,14772512,correct,mpirun -np 1 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,2,2,1,1,1.208783,1.269607,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,2,2,1,2,1.1856,1.245809,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,2,2,1,3,1.1918,1.252092,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,4,2,2,1,0.633925,0.694730,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,4,2,2,2,0.620212,0.680776,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,4,2,2,3,0.631217,0.691699,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,8,2,4,1,0.364455,0.427457,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,8,2,4,2,0.35636,0.416980,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,8,2,4,3,0.351799,0.411931,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,12,2,6,1,0.279952,0.339914,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,12,2,6,2,0.270825,0.332472,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,12,2,6,3,0.281139,0.341444,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,24,2,12,1,0.204601,0.267958,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,24,2,12,2,0.210719,0.272763,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
+hybrid,16,24,2,12,3,0.219554,0.280638,14772512,correct,mpirun -np 2 /home/sjols/comp364/parallelized-counting-queens/build/hybrid_nqueens 16
