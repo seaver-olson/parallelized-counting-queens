@@ -1,34 +1,53 @@
-# Build
+# Build and run
 
-`make` builds all versions; `make mpi`, `make openmp`, and `make hybrid` build individually.
-`make openmp` builds both schedules; `make openmp-static` and `make openmp-dynamic` select one.
-`make clean` removes build files. MPI and hybrid builds require `mpicc`.
-
-# Run Tests
+Requires GCC with OpenMP, MPI (`mpicc`, `mpirun`), and Python 3.
+Run the commands below from the project root.
+Executables and object files go in `build/`; `make clean` removes that folder.
 
 ```sh
-make check                               # All versions, N = 4 through 16
-make check-mpi N=17 WORKERS=4              # Four MPI processes
-make check-openmp N="16 17" WORKERS=4      # Both OpenMP schedules
-make check-openmp-static N=17 WORKERS=4    # Static schedule only
-make check-openmp-dynamic N=17 WORKERS=4   # Dynamic schedule only
-make check-hybrid N=17 WORKERS=2 THREADS=4 # Two processes, four threads each
+make all
+make check                                      # All versions, N=4..16
+make check N="4 8 12" WORKERS=4 THREADS=2          # Short test
+make benchmark N="4 8 12 14 16" BENCH_ARGS="--output results/comparison.csv"
 ```
 
-All check targets accept a single `N` or a quoted list. Valid sizes are 4 through 27;
-large boards take rapidly increasing time. Expected counts come from
-[OEIS A000170](https://oeis.org/A000170/b000170.txt).
+Choose a new CSV filename for each benchmark run.
 
-`WORKERS` defaults to 4: MPI/hybrid processes or OpenMP threads. For hybrid,
-`THREADS` defaults to 4 threads per process, so total workers are `WORKERS * THREADS`.
-Compare the printed `Time` values with equal total worker counts; MPI process
-startup is outside the printed timer.
+# Plot results
 
-MPI and OpenMP distribute legal placements in the first two rows. Static scheduling
-assigns tasks in advance; dynamic scheduling hands them out as threads finish. Hybrid assigns
-first-row branches to MPI processes and second-row placements to OpenMP threads.
-All four versions use the same recursive bitmask solver and mirror symmetry.
-The solver counts the final row directly and prunes branches when the next row
-already has no possible square. Builds use portable `-O3` optimization.
+```sh
+python3 -m venv .venv                            # One-time setup
+.venv/bin/python -m pip install matplotlib
+.venv/bin/python plot_results.py results/comparison.csv
+```
 
-# Report
+Replace the CSV path to plot another run. Runtime and speedup graphs are saved
+as PNG and PDF files in `results/comparison-plots/`.
+
+# Perf counters
+
+```sh
+PERF_DIR=results/perf/serial-n16 ./perf_worker.sh ./build/nqueens 16
+PERF_DIR=results/perf/static-n16-t4 OMP_NUM_THREADS=4 OMP_DYNAMIC=FALSE ./perf_worker.sh ./build/openmp_static_nqueens 16
+PERF_DIR=results/perf/dynamic-n16-t4 OMP_NUM_THREADS=4 OMP_DYNAMIC=FALSE ./perf_worker.sh ./build/openmp_dynamic_nqueens 16
+PERF_DIR=results/perf/mpi-n16-p4 mpirun -np 4 ./perf_worker.sh ./build/mpi_nqueens 16
+PERF_DIR=results/perf/hybrid-n16-p2-t2 OMP_NUM_THREADS=2 OMP_DYNAMIC=FALSE mpirun -np 2 ./perf_worker.sh ./build/hybrid_nqueens 16
+python3 perf_table.py results/perf/*/perf_worker_*.txt > results/perf/table.csv
+```
+
+Choose a new `PERF_DIR` for another run. MPI/hybrid get one file and table row per
+rank. Wall time covers the whole worker process, including MPI setup and waiting.
+Unsupported counters and undefined ratios appear as `N/A`, not zero.
+
+For the Part 1 sweep, choose an N where serial takes at least 30 seconds (18 is
+the default; confirm it on your system), then run:
+
+```sh
+./perf_sweep.sh 18
+python3 perf_table.py --median results/perf/part1-n18/*/trial-*/perf_worker_*.txt > results/perf/part1-n18/medians.csv
+```
+
+The sweep records three trials at 1, 2, 4, 8, 12, and 24 workers. Serial is run
+once per trial; OpenMP static/dynamic and MPI use every worker count. Raw perf
+files and each run's solution check are kept under the matching results folder.
+Use the same N in both commands and in the median command's input and output paths.

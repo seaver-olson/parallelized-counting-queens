@@ -6,7 +6,7 @@
  * two queens share a row, column, or diagonal.
  *
  * Build:  make mpi
- * Run:    mpirun -np 4 ./mpi_nqueens N
+ * Run:    mpirun -np 4 ./build/mpi_nqueens N
  *
  * Every solution has exactly one queen in each row, so we fill the board
  * one row at a time, top to bottom. Bitmasks track unused columns and
@@ -44,37 +44,10 @@
 #include <mpi.h>
 
 #include "utils.h"
+#include "solve.h"
 
 /* Low N bits mark the board's columns. Set once in main(). */
 static unsigned all;
-
-/*
- * Count completions using unused columns and diagonal attacks in this row.
- * remaining is nonzero; the final queen is counted without recursing.
- */
-unsigned long long solve(unsigned remaining, unsigned left, unsigned right)
-{
-    unsigned available = remaining & ~(left | right);
-    /* With one unused column, count the final row without another call. */
-    if (!(remaining & (remaining - 1u))) {
-        return available != 0;
-    }
-    /* A next row with no possible square cannot be rescued by this row. */
-    if (!(remaining & ~((left << 1) | (right >> 1)))) return 0;
-
-    unsigned long long count = 0;
-    while (available) {
-        /* Select the lowest legal bit, then remove it from this row's choices. */
-        unsigned queen = available & (0u - available);
-        available &= available - 1u;
-
-        /* Diagonal attacks move one column sideways in the next row. */
-        count += solve(remaining ^ queen, (left | queen) << 1,
-                       (right | queen) >> 1);
-    }
-
-    return count;
-}
 
 int main(int argc, char *argv[])
 {
